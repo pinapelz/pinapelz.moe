@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinapelz Moe</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <script src="scripts/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <marquee behavior="alternate" direction="left">
+          Welcome to pinapelz.moe
+        </marquee>
+      </div>
+      <div class="sidebar">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About Me</a></li>
+        </ul>
+        <img
+          src="assets/pfp.webp"
+          class="border-img crazy-image"
+          width="250px"
+          alt="Cute Anime GIF"
+        />
+
+        <div class="contacts-section">
+          <h3>Contact Me</h3>
+          <p>idk maybe you need to reach me for some reason</p>
+          <ul>
+            <li>
+              Email:
+              <a href="mailto:pinapelz@moekyun.me">pinapelz@moekyun.me</a>
+            </li>
+            <li>X: <a href="https://x.com/pinapelz">@pinapelz</a></li>
+            <li>
+              Misskey:
+              <a href="https://mk.arks.cafe/@pinapelz"
+                >@pinapelz@mk.arks.cafe</a
+              >
+            </li>
+            <li>Discord: @pinapelz</li>
+          </ul>
+        </div>
+        <section id="discord-status" class="discord-status">
+          <img
+            src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
+            alt="Discord Avatar"
+          />
+          <div class="status-container">
+            <h2><span class="status-text"></span></h2>
+          </div>
+          <script>fetchDiscordStatus("246787839570739211");</script>
+        </section>
+        <p id="quote">
+        </p>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const quotes = [
+              "Give a man a fish, learn him how to eat, give a man- learn a man how to - xQc",
+              "Yeah I'm GAY, Good at Yugioh - Rosemi Lovelock",
+              "yipee - Erina Makina",
+              "Your friend doesn't like Vtubers? Tell your friend to get some taste - Pavolia Reine",
+            ];
+
+            function getRandomQuote() {
+              const randomIndex = Math.floor(Math.random() * quotes.length);
+              return quotes[randomIndex];
+            }
+
+            const quoteElement = document.getElementById("quote");
+            quoteElement.innerHTML = `<i>${getRandomQuote()}</i>`;
+          });
+        </script>
+      </div>
+
+      <div class="content">
+        <h2>Welcome!</h2>
+        <p>
+          <blink>Ahoy!</blink> Thanks for visiting! I thought the old Linktree
+          like site was pretty boring for a
+          <span class="glitter">.moe</span> domain, so I took matters into my
+          own hands and "<span class="glitter">moeifyed</span>" it!
+        </p>
+        <p style="display: flex; align-items: center">
+          Hope you enjoy your stay!
+          <img src="assets/xqcl.webp" width="35px" style="margin-left: 10px" />
+        </p>
+
+        <div class="projects-section">
+          <h1 style="color: #ff69b4">cool and intersting stuff</h1>
+          <h4>or at least i think they're pretty cool :( go check them out!</h4>
+          <ul>
+            <li>
+              <h2>
+                <a href="https://patchwork.moekyun.me">Patchwork Archive</a>
+              </h2>
+              A running archive of VTuber music. Trying to archive every
+              music/cover created by the VTuber community. Over 15K songs/covers
+              and counting!
+            </li>
+            <li>
+              <h2><a href="https://phase-tracker.com">PhaseTracker</a></h2>
+              The UNOFFICIAL Phase Connect subscriber tracker. I know some
+              people don't like number sites, but I still thought that it would
+              be awesome to track the growth of one of my favorite VTuber
+              groups.
+            </li>
+            <li>
+              <h2>
+                <a href="https://github.com/pinapelz/ffxiv-malmstone"
+                  >Malmstone Calculator</a
+                >
+              </h2>
+              A FFXIV Dalamud plugin that helps with calculating how much more
+              pvp you got left to play before hitting the next level in the
+              battlepass system. Made it cause I was tired of always having to
+              use an online calculator and plugging in the numbers manually.
+            </li>
+            <li>
+              <h2>
+                <a href="https://github.com/pinapelz/discord-to-xiv"
+                  >DiscordToXIV</a
+                >
+              </h2>
+              A crazy FFXIV plugin that uses BetterDiscord and websockets to
+              bring Discord messages into your FFXIV game. Now you can feel less
+              lonely in game.
+            </li>
+            <br />
+            <p>
+              wow i'm definelty not seeing a trend with these... the rest of the
+              stuff is over on my
+              <a href="https://github.com/pinapelz">GitHub</a>!
+            </p>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer">
+        <marquee behavior="scroll" direction="right">
+          what this do again?
+        </marquee>
+      </div>
+    </div>
+  </body>
+</html>
