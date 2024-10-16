@@ -1,172 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pinapelz.moe - u found it</title>
-    <meta name="description" content="moe moe wow why did i make this" />
-    <link rel="icon" href="assets/pfp.webp" />
-    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-    <link rel="stylesheet" type="text/css" href="styles/clock.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script src="scripts/index.js"></script>
-    <style>
-      .marquee span {
-        font-family: 'Press Start 2P', cursive;
-        font-size: 25px;
-      }
-    </style>
-  </head>
-  <body>
-    <script src="/scripts/clock.js"></script>
-    <div class="container">
-      <div class="header">
-        <div class="header-content">
-          <div class="marquee">
-            <span>welcome to pinapelz.moe</span>
-          </div>
-          <div class="header-animation">
-            <img src="/assets/603.webp" alt="rosemi" class="random-float" />
-            <img src="/assets/eri.jpg" alt="erina" class=" random-float" />
-            <img src="/assets/reine.jpg" alt="reine" class="random-float" />
-            <img src="/assets/usami.webp" alt="usami" class="random-float" />
-            <img src="/assets/vuln.jpg" alt="vuln" class="random-float" />
-            <img src="/assets/gc.jpg" alt="gnomechild" class="random-float" />
-            <img src="/assets/rappy.webp" alt="rappy" class="random-float" />
-            <img src="/assets/aiba.webp" alt="aiba" class="random-float" />
-          </div>
-        </div>
-      </div>
-      <div class="sidebar">
-        <h3>Navigation</h3>
-        <ul>
-          <li><a href="/">home</a></li>
-          <li><a href="/about.html">webmaster</a></li>
-          <li><a href="/projects.html">projects</a></li>
-          <li><a href="https://moekyun.me">moeify my link</a></li>
-        </ul>
-        <img
-          src="assets/pfp.webp"
-          class="border-img crazy-image"
-          width="250px"
-          alt="Cute Anime GIF"
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>pinapelz.moe - u found it</title>
+        <meta name="description" content="moe moe wow why did i make this" />
+        <link rel="icon" href="assets/pfp.webp" />
+        <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+        <link rel="stylesheet" type="text/css" href="styles/clock.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+            rel="stylesheet"
         />
-
-        <div class="contacts-section">
-          <h3>Contact Me</h3>
-          <p>idk maybe you need to reach me for some reason</p>
-          <ul>
-            <li>
-              Email:
-              <a href="mailto:pinapelz@moekyun.me">pinapelz@moekyun.me</a>
-            </li>
-            <li>X: <a href="https://x.com/pinapelz">@pinapelz</a></li>
-            <li>
-              Misskey:
-              <a href="https://mk.arks.cafe/@pinapelz"
-                >@pinapelz@mk.arks.cafe</a
-              >
-            </li>
-            <li>Discord: @pinapelz</li>
-          </ul>
-        </div>
-        <section id="discord-status" class="discord-status">
-          <img
-            src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
-            alt="Discord Avatar"
-          />
-          <div class="status-container">
-            <h2><span class="status-text"></span></h2>
-          </div>
-          <script>fetchDiscordStatus("246787839570739211");</script>
-        </section>
-        <p id="quote"></p>
-      </div>
-
-      <div class="content">
-        <div class="welcome-box">
-          <h2>Welcome!</h2>
-          <p>
-            <blink>Ahoy!</blink> Thanks for visiting! I thought the old Linktree
-            like site was pretty boring for a
-            <span class="glitter">.moe</span> domain, so I took matters into my
-            own hands and "<span class="glitter">moeifyed</span>" it!
-          </p>
-          <p style="display: flex; align-items: center">
-            Hope you enjoy your stay!
-            <img
-              src="assets/xqcl.webp"
-              width="35px"
-              style="margin-left: 10px"
-            />
-          </p>
-        </div>
-
-        <div class="general-section">
-          <div id="music-player" class="music-player">
-            <h3>Patchwork Radio</h3>
-            <audio controls style="width: 100%;">
-              <source src="https://a4.asurahosting.com/listen/patchworkarchive/radio.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-            <div id="now-playing" class="now-playing">
-              <h4>Now Playing:</h4>
-              <p id="song-title">Loading... 123</p>
-              <p id="song-artist">plz be patient. radio might be down</p>
-              <a href="https://patchwork.moekyun.me/radio">Powered by Patchwork Archive</a>
-
+        <script src="scripts/index.js"></script>
+        <style>
+            .marquee span {
+                font-family: "Press Start 2P", cursive;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="/scripts/clock.js"></script>
+        <div class="container">
+            <div class="header">
+                <div class="header-content">
+                    <div class="marquee">
+                        <span>welcome to pinapelz.moe</span>
+                    </div>
+                    <div class="header-animation">
+                        <img
+                            src="/assets/603.webp"
+                            alt="rosemi"
+                            class="random-float"
+                        />
+                        <img
+                            src="/assets/eri.jpg"
+                            alt="erina"
+                            class="random-float"
+                        />
+                        <img
+                            src="/assets/reine.jpg"
+                            alt="reine"
+                            class="random-float"
+                        />
+                        <img
+                            src="/assets/usami.webp"
+                            alt="usami"
+                            class="random-float"
+                        />
+                        <img
+                            src="/assets/vuln.jpg"
+                            alt="vuln"
+                            class="random-float"
+                        />
+                        <img
+                            src="/assets/gc.jpg"
+                            alt="gnomechild"
+                            class="random-float"
+                        />
+                        <img
+                            src="/assets/rappy.webp"
+                            alt="rappy"
+                            class="random-float"
+                        />
+                        <img
+                            src="/assets/aiba.webp"
+                            alt="aiba"
+                            class="random-float"
+                        />
+                    </div>
+                </div>
             </div>
-          </div>
-          <img src="/assets/growing.gif" height=300px alt="Patchwork Archive" class="border-img" />
-          <img src="/assets/skill-issue.gif" height=300px alt="Patchwork Archive" class="border-img" />
-        </div>
-        <div id="clock" class="clock-widget">
-        </div>
-        <div class="general-section" style="font-size: 1.1em;">
-          <div>
-            <h3>GitHub</h3>
-            <p>nerdge programming <br/> + open source stuff 🤓</p>
-            <a href="https://github.com/pinapelz">
-              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="20" height="20" style="vertical-align: middle; margin-right: 5px;">
-              github.com/pinapelz
-            </a>
-          </div>
-        
-          <div>
-            <h3>Blog</h3>
-            <p>random rambling<br/>
-            (sometimes technical stuff)</p>
-            <a href="https://blog.pinapelz.com">
-              blog.pinapelz.com
-            </a>
-          </div>
-          <div>
-            <h3>Super Secret Link</h3>
-            <p>mystery link for true vtuber degens<br/>
-            I'll change it from time to time</p>
-            <a href="https://moekyun.me/V8wPmz">
-              🔒 https://moekyun.me/V8wPmz
-            </a>
-          </div>
-        </div>
+            <div class="sidebar">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><a href="/about.html">webmaster</a></li>
+                    <li><a href="/projects.html">projects</a></li>
+                    <li><a href="https://moekyun.me">moeify my link</a></li>
+                </ul>
+                <img
+                    src="assets/pfp.webp"
+                    class="border-img crazy-image"
+                    width="250px"
+                    alt="Cute Anime GIF"
+                />
 
-      </div>
+                <div class="contacts-section">
+                    <h3>Contact Me</h3>
+                    <p>idk maybe you need to reach me for some reason</p>
+                    <ul>
+                        <li>
+                            Email:
+                            <a href="mailto:pinapelz@moekyun.me"
+                                >pinapelz@moekyun.me</a
+                            >
+                        </li>
+                        <li>
+                            X: <a href="https://x.com/pinapelz">@pinapelz</a>
+                        </li>
+                        <li>
+                            Misskey:
+                            <a href="https://mk.arks.cafe/@pinapelz"
+                                >@pinapelz@mk.arks.cafe</a
+                            >
+                        </li>
+                        <li>Discord: @pinapelz</li>
+                    </ul>
+                </div>
+                <section id="discord-status" class="discord-status">
+                    <img
+                        src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
+                        alt="Discord Avatar"
+                    />
+                    <div class="status-container">
+                        <h2><span class="status-text"></span></h2>
+                    </div>
+                    <script>
+                        fetchDiscordStatus("246787839570739211");
+                    </script>
+                </section>
+                <p id="quote"></p>
+            </div>
 
-      <div class="footer">
+            <div class="content">
+                <div class="welcome-box">
+                    <h2>Welcome!</h2>
+                    <p>
+                        <blink>Ahoy!</blink> Thanks for visiting! I thought the
+                        old Linktree like site was pretty boring for a
+                        <span class="glitter">.moe</span> domain, so I took
+                        matters into my own hands and "<span class="glitter"
+                            >moeifyed</span
+                        >" it!
+                    </p>
+                    <p style="display: flex; align-items: center">
+                        Hope you enjoy your stay!
+                        <img
+                            src="assets/xqcl.webp"
+                            width="35px"
+                            style="margin-left: 10px"
+                        />
+                    </p>
+                </div>
 
-        <marquee behavior="scroll" direction="right">
-          pinapelz.moe/ pinapelz.com / phase-tracker.com /
-          imisserinya.phase-tracker.com / patchwork.moekyun.me /
-          blog.pinapelz.com / signpost.pinapelz.com / mojibaka.pinapelz.com /
-          moekyun.me / vtuber-captcha.moekyun.me /
-        </marquee>
-        
-        <a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button7.gif"></a>
-        <a href="https://linux.org/"><img src="https://adriansblinkiecollection.neocities.org/buttons/a46.jpg"></a>
-        <a href="https://www.cutercounter.com/" target="_blank"><img src="https://www.cutercounter.com/hits.php?id=huxqxocn&nd=6&style=119" border="0" alt="hit counter"></a>
-      
-      
-      </div>
-    </div>
-  </body>
+                <div class="general-section">
+                    <div id="music-player" class="music-player">
+                        <h3>Patchwork Radio</h3>
+                        <audio controls style="width: 100%">
+                            <source
+                                src="https://a4.asurahosting.com/listen/patchworkarchive/radio.mp3"
+                                type="audio/mpeg"
+                            />
+                            Your browser does not support the audio element.
+                        </audio>
+                        <div id="now-playing" class="now-playing">
+                            <h4>Now Playing:</h4>
+                            <p id="song-title">Loading... 123</p>
+                            <p id="song-artist">
+                                plz be patient. radio might be down
+                            </p>
+                            <a href="https://patchwork.moekyun.me/radio"
+                                >Powered by Patchwork Archive</a
+                            >
+                        </div>
+                    </div>
+                    <img
+                        src="/assets/growing.gif"
+                        height="300px"
+                        alt="Patchwork Archive"
+                        class="border-img"
+                    />
+                    <img
+                        src="/assets/skill-issue.gif"
+                        height="300px"
+                        alt="Patchwork Archive"
+                        class="border-img"
+                    />
+                </div>
+                <div id="clock" class="clock-widget"></div>
+                <div class="general-section" style="font-size: 1.1em">
+                    <div>
+                        <h3>GitHub</h3>
+                        <p>
+                            nerdge programming <br />
+                            + open source stuff 🤓
+                        </p>
+                        <a href="https://github.com/pinapelz">
+                            <img
+                                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                                alt="GitHub Logo"
+                                width="20"
+                                height="20"
+                                style="
+                                    vertical-align: middle;
+                                    margin-right: 5px;
+                                "
+                            />
+                            github.com/pinapelz
+                        </a>
+                    </div>
+
+                    <div>
+                        <h3>Blog</h3>
+                        <p>
+                            random rambling<br />
+                            (sometimes technical stuff)
+                        </p>
+                        <a href="https://blog.pinapelz.com">
+                            blog.pinapelz.com
+                        </a>
+                    </div>
+                    <div>
+                        <h3>Super Secret Link</h3>
+                        <p>
+                            mystery link for true vtuber degens<br />
+                            I'll change it from time to time
+                        </p>
+                        <a href="https://moekyun.me/V8wPmz">
+                            🔒 https://moekyun.me/V8wPmz
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <marquee behavior="scroll" direction="right">
+                    pinapelz.moe/ pinapelz.com / phase-tracker.com /
+                    imisserinya.phase-tracker.com / patchwork.moekyun.me /
+                    blog.pinapelz.com / signpost.pinapelz.com /
+                    mojibaka.pinapelz.com / moekyun.me /
+                    vtuber-captcha.moekyun.me /
+                </marquee>
+
+                <a href="https://nekoweb.org/"
+                    ><img src="https://nekoweb.org/assets/buttons/button7.gif"
+                /></a>
+                <a href="https://linux.org/"
+                    ><img
+                        src="https://adriansblinkiecollection.neocities.org/buttons/a46.jpg"
+                /></a>
+                <a href="https://www.cutercounter.com/" target="_blank"
+                    ><img
+                        src="https://www.cutercounter.com/hits.php?id=huxqxocn&nd=6&style=119"
+                        border="0"
+                        alt="hit counter"
+                /></a>
+            </div>
+        </div>
+    </body>
 </html>
