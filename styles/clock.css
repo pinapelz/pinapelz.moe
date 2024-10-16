@@ -1,0 +1,43 @@
+.clock-widget {
+    font-size: 2em;
+    color: #ff69b4;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #ff69b4;
+    background: #ffe4e1;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    position: relative;
+    overflow: hidden;
+    animation: glitter 3s infinite alternate;
+    border-width:20px;
+    padding:10px;
+    border-style:solid;
+    border-image: url("https://foollovers.com/mat/plate/pl035-plate-j03.gif") 55 fill round; 
+}
+
+.clock-widget::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(255, 228, 225, 0.2));
+    animation: rotate 6s linear infinite;
+}
+
+.clock-widget span {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

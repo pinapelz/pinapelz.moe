@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>projects - very cool stuff yep</title>
+    <meta name="description" content="moe moe wow why did i make this" />
+    <link rel="icon" href="assets/pfp.webp" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/projects.css" />
+    <script src="scripts/index.js"></script>
+    <style>
+      .image-container {
+        display: flex;
+        gap: 10px;
+      }
+      .image-container img {
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .image-container img:hover {
+        transform: scale(1.05);
+      }
+      .fullscreen-img {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .fullscreen-img img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <marquee behavior="alternate" direction="left">
+          fun stuff (maybe)
+        </marquee>
+      </div>
+      <div class="sidebar">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="/">home</a></li>
+          <li><a href="/about.html">webmaster</a></li>
+          <li><a href="/about.html">projects</a></li>
+          <li><a href="https://moekyun.me">moeify my link</a></li>
+        </ul>
+
+        <div class="image-section">
+          <img
+            src="assets/pfp.webp"
+            class="border-img crazy-image"
+            width="250px"
+            alt="Cute Anime GIF"
+          />
+        </div>
+
+        <div class="contacts-section">
+          <h3>Contact Me</h3>
+          <p>idk maybe you need to reach me for some reason</p>
+          <ul>
+            <li>
+              Email:
+              <a href="mailto:pinapelz@moekyun.me">pinapelz@moekyun.me</a>
+            </li>
+            <li>X: <a href="https://x.com/pinapelz">@pinapelz</a></li>
+            <li>
+              Misskey:
+              <a href="https://mk.arks.cafe/@pinapelz"
+                >@pinapelz@mk.arks.cafe</a
+              >
+            </li>
+            <li>Discord: @pinapelz</li>
+          </ul>
+        </div>
+        <section id="discord-status" class="discord-status">
+          <img
+            src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
+            alt="Discord Avatar"
+          />
+          <div class="status-container">
+            <h2><span class="status-text"></span></h2>
+          </div>
+          <script>fetchDiscordStatus("246787839570739211");</script>
+        </section>
+        <p id="quote"></p>
+      </div>
+
+      <div class="content">
+        <div class="projects-section">
+          <h1 style="color: #ff69b4">cool and interesting stuff</h1>
+          <h4>or at least i think they're pretty cool :( go check them out!</h4>
+          <ul>
+            <li>
+              <h2>
+                <a href="https://patchwork.moekyun.me">Patchwork Archive</a>
+              </h2>
+              <p>
+                A running archive of VTuber music. Trying to archive every
+                music/cover created by the VTuber community. Over 15K songs/covers
+                and counting!
+              </p>
+              <div class="image-container">
+                <img src="https://i.postimg.cc/J0R5tZ25/image.png" alt="Patchwork Archive 1" width="250px" />
+                <img src="https://i.postimg.cc/jdmv4wwt/output.gif" alt="Patchwork Archive 2" width="300px" />
+              </div>
+            </li>
+            <li>
+              <h2><a href="https://phase-tracker.com">PhaseTracker</a></h2>
+              <div class="image-container">
+                <img src="https://i.postimg.cc/tgyTKkZk/image.png" alt="PhaseTracker 1" width="300px" />
+                <img src="https://i.postimg.cc/L6VSwSSq/image.png" alt="PhaseTracker 2" width="300px" />
+              </div>
+              <p>
+                The UNOFFICIAL Phase Connect subscriber tracker. I know some
+                people don't like number sites, but I still thought that it would
+                be awesome to track the growth of one of my favorite VTuber
+                groups.
+              </p>
+            </li>
+            <li>
+              <h2>
+                <a href="https://github.com/pinapelz/ffxiv-malmstone"
+                  >Malmstone Calculator</a
+                >
+              </h2>
+              <p>
+                A FFXIV Dalamud plugin that helps with calculating how much more
+                pvp you got left to play before hitting the next level in the
+                battlepass system. Made it cause I was tired of always having to
+                use an online calculator and plugging in the numbers manually.
+              </p>
+            </li>
+            <li>
+              <h2>
+                <a href="https://github.com/pinapelz/JHolodex"
+                  >JHolodex</a
+                >
+              </h2>
+              <p>
+                Its a wrapper for the Holodex API for Java. Uhhh, maybe this will be useful for the 2 people out there
+                who need VTuber data in their application and are for some forbidden reason choosing Java as the language
+                to do that in. (i really love jvm)
+              </p>
+            </li>
+            <br />
+            <p>
+            yep not seeing a trend here at all... if you like this sorta thing, the rest of it
+              is over on my
+              <a href="https://github.com/pinapelz">GitHub</a>
+            </p>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer">
+        <marquee behavior="scroll" direction="right">
+          what this do again?
+        </marquee>
+      </div>
+    </div>
+
+    <div class="fullscreen-img" id="fullscreenImg">
+      <img src="" alt="Fullscreen Image" />
+    </div>
+
+    <script>
+      document.querySelectorAll('.image-container img').forEach(img => {
+        img.addEventListener('click', function() {
+          const fullscreenImg = document.getElementById('fullscreenImg');
+          fullscreenImg.style.display = 'flex';
+          fullscreenImg.querySelector('img').src = this.src;
+        });
+      });
+
+      document.getElementById('fullscreenImg').addEventListener('click', function() {
+        this.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>

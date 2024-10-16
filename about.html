@@ -8,10 +8,13 @@
     <link rel="icon" href="assets/pfp.webp" />
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <script src="scripts/index.js"></script>
+    <style>
+    </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container">     
       <div class="header">
+        
         <marquee behavior="alternate" direction="left">
           About Me
         </marquee>
@@ -20,8 +23,9 @@
       <div class="sidebar">
         <h3>Navigation</h3>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/">home</a></li>
+          <li><a href="/about.html">webmaster</a></li>
+          <li><a href="/projects.html">projects</a></li>
           <li><a href="https://moekyun.me">moeify my link</a></li>
         </ul>
         <img
@@ -54,7 +58,7 @@
             src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
             alt="Discord Avatar"
           />
-          <script>fetchDiscordStatus("246787839570739211");</script>
+          
         <div class="status-container">
             <h2><span class="status-text"></span></h2>
         </div>
@@ -63,42 +67,52 @@
       </div>
 
       <div class="content">
-        <div class="projects-section">
+        <div class="general-section center">
             <h3>info</h3>
-            <p>
-            I'm a student at UC Irvine studying Software Engineering. I daily drive Arch Linux but my WM/DE changes depending on
-            what I feel like, I mainly use Hyprland and KDE Plasma though. In case you couldn't tell, I watch anime + read manga +
-            (although these days i mainly just accumulated brainrot from watching twitch streams + vtubers)<br/>
-            </p>
+            <ul style="list-style-type: none;">
+                <li>Student at UC Irvine studying Software Engineering</li>
+                <li>Daily drives Arch Linux</li>
+                <li>Mainly on Hyprland and KDE Plasma</li>
+                <li>Watches anime and reads manga</li>
+                <li>Accumulates brainrot from watching Twitch streams and VTubers</li>
+            </ul>
             <h3>games</h3>
+            <ul style="list-style-type: none;">
+                <li>MMOs - FFXIV, PSO2, OSRS</li>
+                <li>(J)RPGs - Persona, Xenoblade </li>
+                <li>Visual Novel/Adventure - Danganronpa, AI The Sommnium, 999</li>
+            </ul>
             <p>
-            I mostly play MMOs (FFXIV, PSO2, OSRS), RPGs (Persona, Xenoblade), and [sorta] Visual Novels (AI The Sommnium, Danganronpa, 999). Its basically
-            mostly story heavy stuff.
+              basically stuff that is heavy on the story
+            </p>
+            <h3>anime/manga</h3>
+            <p>
+              I pretty much only watch/read slice of life... yuru camp, k-on, nichijou that sorta thing
+            </p>
+            <h3>vtubers</h3>
+            <p>
+              mostly watch erina makina (pc), rosemi lovelock (niji), and pavolia reine (holo)
             </p>
             <h3>stack</h3>
             <p>
-            idk, it changes a lot. i feel like its been mostly Next JS + React + Tailwind CSS serverless lately. but tbh i hop around a lot. whatever seems fun
+            whatever seems fun (but usually next js + tailwind + flask)
             </p>
             <p>
-                Not much else to really say... if you want some random technical rambling go to <a href="https://blog.pinapelz.com">my blog</a>
+                Not much else to say... if you want some random technical rambling go to <a href="https://blog.pinapelz.com">my blog</a>
             </p>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; text-align: center; margin-top: 40px;">
-              <a href="https://na.finalfantasyxiv.com/lodestone/character/30300645/"><img src="assets/xiv.webp" style="width: 100%;"/></a>
-              <img src="assets/pso2.webp" style="width: 100%;"/>
-            </div>
-            probably not up to date so click on it and go to lodestone
-
-            <a href="https://imisserinya.phase-tracker.com">
-            <div style="text-align: center; margin-top: 20px;">
-                <img src="https://files.pinapelz.com/1077804029737975879.webp" width="300px" class="crazy-image"/>
-                <div class="fullscreen-text">i miss erinya uuuuuuuuu!!!</div>
-            </div>
-          </a>
-
+            <div class="center">
+              <a href="https://imisserinya.phase-tracker.com">
+                <div class="center">
+                    <img src="https://files.pinapelz.com/1077804029737975879.webp" width="200px" class="crazy-image"/>
+                    <div class="fullscreen-text">i miss erinya uuuuuuuuu!!!</div>
+                  </div>
+                </a>
+          </div>
+        </div>
+        
       </div>
-
-      
-
     </div>
+    
   </body>
+  
 </html>

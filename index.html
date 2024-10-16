@@ -7,20 +7,42 @@
     <meta name="description" content="moe moe wow why did i make this" />
     <link rel="icon" href="assets/pfp.webp" />
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/clock.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="scripts/index.js"></script>
+    <style>
+      .marquee span {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 25px;
+      }
+    </style>
   </head>
   <body>
+    <script src="/scripts/clock.js"></script>
     <div class="container">
       <div class="header">
-        <marquee behavior="alternate" direction="left">
-          Welcome to pinapelz.moe
-        </marquee>
+        <div class="header-content">
+          <div class="marquee">
+            <span>welcome to pinapelz.moe</span>
+          </div>
+          <div class="header-animation">
+            <img src="/assets/603.webp" alt="rosemi" class="random-float" />
+            <img src="/assets/eri.jpg" alt="erina" class=" random-float" />
+            <img src="/assets/reine.jpg" alt="reine" class="random-float" />
+            <img src="/assets/usami.webp" alt="usami" class="random-float" />
+            <img src="/assets/vuln.jpg" alt="vuln" class="random-float" />
+            <img src="/assets/gc.jpg" alt="gnomechild" class="random-float" />
+            <img src="/assets/rappy.webp" alt="rappy" class="random-float" />
+            <img src="/assets/aiba.webp" alt="aiba" class="random-float" />
+          </div>
+        </div>
       </div>
       <div class="sidebar">
         <h3>Navigation</h3>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/">home</a></li>
+          <li><a href="/about.html">webmaster</a></li>
+          <li><a href="/projects.html">projects</a></li>
           <li><a href="https://moekyun.me">moeify my link</a></li>
         </ul>
         <img
@@ -58,95 +80,92 @@
           </div>
           <script>fetchDiscordStatus("246787839570739211");</script>
         </section>
-        <p id="quote">
-        </p>
-        <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            const quotes = [
-              "Give a man a fish, learn him how to eat, give a man- learn a man how to - xQc",
-              "Yeah I'm GAY, Good at Yugioh - Rosemi Lovelock",
-              "yipee - Erina Makina",
-              "Your friend doesn't like Vtubers? Tell your friend to get some taste - Pavolia Reine",
-            ];
-
-            function getRandomQuote() {
-              const randomIndex = Math.floor(Math.random() * quotes.length);
-              return quotes[randomIndex];
-            }
-
-            const quoteElement = document.getElementById("quote");
-            quoteElement.innerHTML = `<i>${getRandomQuote()}</i>`;
-          });
-        </script>
+        <p id="quote"></p>
       </div>
 
       <div class="content">
-        <h2>Welcome!</h2>
-        <p>
-          <blink>Ahoy!</blink> Thanks for visiting! I thought the old Linktree
-          like site was pretty boring for a
-          <span class="glitter">.moe</span> domain, so I took matters into my
-          own hands and "<span class="glitter">moeifyed</span>" it!
-        </p>
-        <p style="display: flex; align-items: center">
-          Hope you enjoy your stay!
-          <img src="assets/xqcl.webp" width="35px" style="margin-left: 10px" />
-        </p>
-
-        <div class="projects-section">
-          <h1 style="color: #ff69b4">cool and interesting stuff</h1>
-          <h4>or at least i think they're pretty cool :( go check them out!</h4>
-          <ul>
-            <li>
-              <h2>
-                <a href="https://patchwork.moekyun.me">Patchwork Archive</a>
-              </h2>
-              A running archive of VTuber music. Trying to archive every
-              music/cover created by the VTuber community. Over 15K songs/covers
-              and counting!
-            </li>
-            <li>
-              <h2><a href="https://phase-tracker.com">PhaseTracker</a></h2>
-              The UNOFFICIAL Phase Connect subscriber tracker. I know some
-              people don't like number sites, but I still thought that it would
-              be awesome to track the growth of one of my favorite VTuber
-              groups.
-            </li>
-            <li>
-              <h2>
-                <a href="https://github.com/pinapelz/ffxiv-malmstone"
-                  >Malmstone Calculator</a
-                >
-              </h2>
-              A FFXIV Dalamud plugin that helps with calculating how much more
-              pvp you got left to play before hitting the next level in the
-              battlepass system. Made it cause I was tired of always having to
-              use an online calculator and plugging in the numbers manually.
-            </li>
-            <li>
-              <h2>
-                <a href="https://github.com/pinapelz/discord-to-xiv"
-                  >DiscordToXIV</a
-                >
-              </h2>
-              A crazy FFXIV plugin that uses BetterDiscord and websockets to
-              bring Discord messages into your FFXIV game. Now you can feel less
-              lonely in game.
-            </li>
-            <br />
-            <p>
-              wow i'm definetly not seeing a trend with these... the rest of the
-              stuff is over on my
-              <a href="https://github.com/pinapelz">GitHub</a>!
-            </p>
-          </ul>
+        <div class="welcome-box">
+          <h2>Welcome!</h2>
+          <p>
+            <blink>Ahoy!</blink> Thanks for visiting! I thought the old Linktree
+            like site was pretty boring for a
+            <span class="glitter">.moe</span> domain, so I took matters into my
+            own hands and "<span class="glitter">moeifyed</span>" it!
+          </p>
+          <p style="display: flex; align-items: center">
+            Hope you enjoy your stay!
+            <img
+              src="assets/xqcl.webp"
+              width="35px"
+              style="margin-left: 10px"
+            />
+          </p>
         </div>
+
+        <div class="general-section">
+          <div id="music-player" class="music-player">
+            <h3>Patchwork Radio</h3>
+            <audio controls style="width: 100%;">
+              <source src="https://a4.asurahosting.com/listen/patchworkarchive/radio.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+            <div id="now-playing" class="now-playing">
+              <h4>Now Playing:</h4>
+              <p id="song-title">Loading... 123</p>
+              <p id="song-artist">plz be patient. radio might be down</p>
+              <a href="https://patchwork.moekyun.me/radio">Powered by Patchwork Archive</a>
+
+            </div>
+          </div>
+          <img src="/assets/growing.gif" height=300px alt="Patchwork Archive" class="border-img" />
+          <img src="/assets/skill-issue.gif" height=300px alt="Patchwork Archive" class="border-img" />
+        </div>
+        <div id="clock" class="clock-widget">
+        </div>
+        <div class="general-section" style="font-size: 1.1em;">
+          <div>
+            <h3>GitHub</h3>
+            <p>nerdge programming <br/> + open source stuff 🤓</p>
+            <a href="https://github.com/pinapelz">
+              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" width="20" height="20" style="vertical-align: middle; margin-right: 5px;">
+              github.com/pinapelz
+            </a>
+          </div>
+        
+          <div>
+            <h3>Blog</h3>
+            <p>random rambling<br/>
+            (sometimes technical stuff)</p>
+            <a href="https://blog.pinapelz.com">
+              blog.pinapelz.com
+            </a>
+          </div>
+          <div>
+            <h3>Super Secret Link</h3>
+            <p>mystery link for true vtuber degens<br/>
+            I'll change it from time to time</p>
+            <a href="https://moekyun.me/V8wPmz">
+              🔒 https://moekyun.me/V8wPmz
+            </a>
+          </div>
+        </div>
+
       </div>
 
       <div class="footer">
+
         <marquee behavior="scroll" direction="right">
-          what this do again?
+          pinapelz.moe/ pinapelz.com / phase-tracker.com /
+          imisserinya.phase-tracker.com / patchwork.moekyun.me /
+          blog.pinapelz.com / signpost.pinapelz.com / mojibaka.pinapelz.com /
+          moekyun.me / vtuber-captcha.moekyun.me /
         </marquee>
+        
+        <a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button7.gif"></a>
+        <a href="https://linux.org/"><img src="https://adriansblinkiecollection.neocities.org/buttons/a46.jpg"></a>
+        <a href="https://www.cutercounter.com/" target="_blank"><img src="https://www.cutercounter.com/hits.php?id=huxqxocn&nd=6&style=119" border="0" alt="hit counter"></a>
+      
+      
       </div>
     </div>
   </body>
