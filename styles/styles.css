@@ -254,6 +254,14 @@ blink {
   .main-content {
     flex-direction: column;
   }
+  .general-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .general-section ul {
+    padding-left: 0;
+  }
 
   .sidebar,
   .content {
@@ -312,7 +320,14 @@ blink {
   display: inline-block;
   vertical-align: top;
 }
+.general-section {
+  flex-direction: column;
+  align-items: center;
+}
 
+.general-section ul {
+  padding-left: 0;
+}
 .music-player h3 {
   color: #ff69b4;
   text-shadow: 1px 1px 2px #fff;
