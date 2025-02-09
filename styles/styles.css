@@ -389,8 +389,14 @@ blink {
     }
 }
 
-marquee {
-    font-size: 1.2em;
-    color: #ff69b4;
-    margin-bottom: 10px;
+.random-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.random-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
