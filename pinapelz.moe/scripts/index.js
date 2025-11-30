@@ -45,25 +45,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const quoteElement = document.getElementById("quote");
   quoteElement.innerHTML = `<i>${getRandomQuote()}</i>`;
 });
-
 function updateClock() {
   const clockElement = document.getElementById('clock');
   const now = new Date();
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const seconds = String(now.getSeconds()).padStart(2, '0');
-  const day = String(now.getDate()).padStart(2, '0');
-  const month = String(now.getMonth() + 1).padStart(2, '0'); 
-  const year = now.getFullYear();
+  const pstTime = new Date(now.toLocaleString("en-US", {timeZone: "America/Los_Angeles"}));
+  const hours = String(pstTime.getHours()).padStart(2, '0');
+  const minutes = String(pstTime.getMinutes()).padStart(2, '0');
+  const seconds = String(pstTime.getSeconds()).padStart(2, '0');
+  const day = String(pstTime.getDate()).padStart(2, '0');
+  const month = String(pstTime.getMonth() + 1).padStart(2, '0');
+  const year = pstTime.getFullYear();
   let message = "good day!";
-  if (now.getHours() >= 0 && now.getHours() < 7) {
-      message = "(you should go to bed)";
-  } else if (now.getHours() < 12) {
-      message = "good morning";
-  } else if (now.getHours() >= 12 && now.getHours() < 18) {
-      message = "afternoon to you!";
-  } else if (now.getHours() >= 18) {
-      message = "evening :)";
+  if (pstTime.getHours() >= 0 && pstTime.getHours() < 7) {
+      message = "(its late for me)";
+  } else if (pstTime.getHours() < 12) {
+      message = "its morning for me";
+  } else if (pstTime.getHours() >= 12 && pstTime.getHours() < 18) {
+      message = "its afternoon for me";
+  } else if (pstTime.getHours() >= 18) {
+      message = "evening rn for me";
   }
   clockElement.innerHTML = `<span>${month}/${day}/${year} ${hours}:${minutes}:${seconds}</span> ` + message;
 }
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       positions.forEach(pos => {
         const distance = Math.sqrt(Math.pow(randomTop - pos.top, 2) + Math.pow(randomLeft - pos.left, 2));
-        if (distance < 10) { 
+        if (distance < 10) {
           overlap = true;
         }
       });
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayRandomImage() {
       const randomIndex = Math.floor(Math.random() * images.length);
       const randomImage = images[randomIndex];
-      
+
       const imageContainer = document.querySelector('.random-image-container');
       imageContainer.innerHTML = `<img src="${randomImage}" alt="Random Image" class="border-img">`;
   }
