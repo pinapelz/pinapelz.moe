@@ -125,23 +125,5 @@ document.addEventListener('DOMContentLoaded', function() {
   setInterval(fetchNowPlaying, 60000);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const images = [
-      "assets/sayo-fries.gif",
-      "assets/chuni-reaction.gif",
-      "assets/haruhikage.jpg",
-  ];
-
-  function displayRandomImage() {
-      const randomIndex = Math.floor(Math.random() * images.length);
-      const randomImage = images[randomIndex];
-
-      const imageContainer = document.querySelector('.random-image-container');
-      imageContainer.innerHTML = `<img src="${randomImage}" alt="Random Image" class="border-img">`;
-  }
-
-  displayRandomImage();
-});
-
 setInterval(updateClock, 1000);
 updateClock();
