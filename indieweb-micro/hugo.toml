@@ -18,7 +18,8 @@ dateFmt = "Monday, January 2, 2006"
     General arcade rhythm game enjoyer (SDVX, IIDX, CHUNITHM)<br/>
     Mostly play MMOs (FFXIV, OSRS), JRPGs, and VNs (anything with a good story)<br/>
     I Watch only slice of life (and Bandori)<br/>
-    Arch Linux + Hyprland user (btw)'''
+    Arch Linux + Hyprland user (btw)<br/>
+    Hi from the <a href="https://indieweb.org/">indieweb</a>, if you are seeing me bridged elsewhere!'''
 [params.indieweb]
     authorizationEndpoint = "https://indieauth.com/auth"
     tokenEndpoint = "https://tokens.indieauth.com/token"
