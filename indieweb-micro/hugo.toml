@@ -14,8 +14,11 @@ dateFmt = "Monday, January 2, 2006"
     name = "Pinapelz"
     email = "yukais@pinapelz.com"
     avatar = "https://pinapelz.moe/assets/pfp.webp"
-    bio = '''hi, this is an informal (micro) blog of sorts. This site was made cause <a href="https://indieweb.org/">IndieWeb</a> seems like a great approach for the type of data agency I wanted out of social media (including the <a href="https://jointhefediverse.net">Fediverse</a> and <a href="https://atproto.com/">AtProto/Bluesky</a> at a fraction of the resources.<br/><br/>
-    There's a lot of stuff that doesn't fit well in a full-length formal blog post. I thought it'd be cool to have something like this on <a href="https://nekoweb.org">Nekoweb</a> since it fits the theme pretty well.'''
+    bio = '''yo! and he's more than a cover he's a quilt<br/>
+    General arcade rhythm game enjoyer (SDVX, IIDX, CHUNITHM)<br/>
+    Mostly play MMOs (FFXIV, OSRS), JRPGs, and VNs (anything with a good story)<br/>
+    I Watch only slice of life (and Bandori)<br/>
+    Arch Linux + Hyprland user (btw)'''
 [params.indieweb]
     authorizationEndpoint = "https://indieauth.com/auth"
     tokenEndpoint = "https://tokens.indieauth.com/token"
