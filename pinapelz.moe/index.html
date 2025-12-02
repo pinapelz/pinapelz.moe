@@ -163,8 +163,8 @@
                     </p>
                 </div>
 
-                <div class="general-section">
-                    <div id="music-player" class="music-player">
+                <div class="general-section" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
+                    <div id="music-player" class="music-player" style="flex: 1;">
                         <h3>Patchwork Radio</h3>
                         <audio controls style="width: 100%">
                             <source
@@ -184,18 +184,44 @@
                             >
                         </div>
                     </div>
-                    <img
-                        src="assets/growing.gif"
-                        height="300px"
-                        alt="Rosemi Lovelock good morning"
-                        class="border-img"
-                    />
-                    <img
-                        src="assets/sayo-fries.gif"
-                        height="300px"
-                        alt="Sayo Hikawa eating fries"
-                        class="border-img"
-                    />
+                    <div style="flex-shrink: 0; text-align: center;">
+                        <img
+                            src="assets/growing.gif"
+                            height="300px"
+                            alt="Rosemi Lovelock good morning"
+                            class="border-img"
+                        />
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="text-align: center;"> <a href="https://micro.pinapelz.moe">micro.pinapelz.moe</a></h3>
+                        <a href="https://micro.pinapelz.moe">
+                            <img
+                                src="assets/sayo-fries.gif"
+                                height="150px"
+                                alt="Sayo Hikawa eating fries"
+                                class="border-img tilt-hover"
+                                style="display: block; margin: 0 auto;"
+                            />
+                        </a>
+                        <style>
+                            .tilt-hover {
+                                transition: transform 0.3s ease;
+                            }
+                            .tilt-hover:hover {
+                                transform: translateY(-20px) rotate(10deg) scale(1.1);
+                                animation: fly 1s ease-in-out;
+                            }
+                            @keyframes fly {
+                                0% { transform: translateY(0) rotate(0deg) scale(1); }
+                                25% { transform: translateY(-10px) rotate(5deg) scale(1.05); }
+                                50% { transform: translateY(-20px) rotate(10deg) scale(1.1); }
+                                75% { transform: translateY(-15px) rotate(8deg) scale(1.08); }
+                                100% { transform: translateY(-20px) rotate(10deg) scale(1.1); }
+                            }
+                        </style>
+                        <p style="text-align: center;">my <a href="https://indieweb.org/">indieweb</a> micro blog bridged with fediverse and bluesky. short thoughts, updates, and random stuff</p>
+                        <a href="https://micro.pinapelz.moe" style="display: block; text-align: center;">check it out here</a>
+                    </div>
                 </div>
                 <div id="clock" class="clock-widget"></div>
                 <div class="general-section" style="display: flex; justify-content: space-between; align-items: center;">
@@ -233,10 +259,10 @@
                     </div>
 
                     <div>
-                        <h3>Blog</h3>
+                        <h3>"Technical" Blog</h3>
                         <p>
-                            random rambling<br />
-                            (sometimes technical stuff)
+                            random long-form rambling<br />
+                            (usually technical or niche stuff)
                         </p>
                         <a href="https://blog.pinapelz.com">
                             blog.pinapelz.com
