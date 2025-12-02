@@ -15,7 +15,7 @@ Visited New York during the Thanksgiving break and had a chance to stopped by on
 
 Also yep you're reading that right, it indeed once home to a [dancing chicken as well as one that played tic tac toe](https://davidpotorti.substack.com/p/the-dancing-chicken).
 
-But apart from just being an old arcade, it was also home to one of the largest competitive arcade game fighting scene (Marven vs Capcom, Street Fighter, etc.). Many of NAs top players frequented this arcade. However, as we all already know video arcades began to die down during the early 2000s and China Town Fair was no exeception having closed in 2011.
+But apart from just being an old arcade, it was also home to one of the largest competitive arcade game fighting scene (Marvel vs Capcom, Street Fighter, etc.). Many of NAs top players frequented this arcade. However, as we all already know video arcades began to die down during the early 2000s and China Town Fair was no exception having closed in 2011.
 
 Then it re-opened under new management and became a complete shell of its former self. These days its pretty much all redemption slop in there. Very few actual "games" in there; there's a DDR A3 cab, PIU, a singular jubeat with a broken audio mod, a fully broken down SDVX Nemsys, and 3 Wangan 5DX+ (not sure what happened to the 4th one).
 

@@ -16,7 +16,7 @@ This is fairly self explanatory. The rebranding of Twitter to X and Musk's new o
 
 
 ## Fediverse
-I initally moved to the `Fediverse` (on Misskey/Sharkey). Interoperability between different platforms is very cool, and the wide variety of platforms to choose from means that picking any platform never made me feel like "missing out" elsewhere.
+I initially moved to the `Fediverse` (on Misskey/Sharkey). Interoperability between different platforms is very cool, and the wide variety of platforms to choose from means that picking any platform never made me feel like "missing out" elsewhere.
 
 However, this in itself has a problem. If you create an account on someone else's instance, you are a part of their *walled garden*. Now I'm sure that they are a wonderful person who equally values data ownership/agency, however it doesn't change the fact that someone else holds your content/data and you rely on them for that service.
 
