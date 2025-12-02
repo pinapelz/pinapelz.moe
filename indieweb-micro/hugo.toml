@@ -13,7 +13,7 @@ dateFmt = "Monday, January 2, 2006"
 [params.author]
     name = "Pinapelz"
     email = "yukais@pinapelz.com"
-    avatar = "https://pinapelz.moe/assets/pfp.webp"
+    avatar = "https://files.catbox.moe/5r1pue.jpg"
     bio = '''yo! and he's more than a cover he's a quilt<br/>
     General arcade rhythm game enjoyer (SDVX, IIDX, CHUNITHM)<br/>
     Mostly play MMOs (FFXIV, OSRS), JRPGs, and VNs (anything with a good story)<br/>
@@ -24,7 +24,7 @@ dateFmt = "Monday, January 2, 2006"
     authorizationEndpoint = "https://indieauth.com/auth"
     tokenEndpoint = "https://tokens.indieauth.com/token"
     webmentionEndpoint = "https://webmention.io/micro.pinapelz.moe/webmention"
-    relmepgp = "/path/to//public/key.asc"
+    relmepgp = "https://pinapelz.com/Yukai_Shan.asc"
     [[params.indieweb.relme]]
         url = "https://github.com/pinapelz"
     [[params.indieweb.relme]]
