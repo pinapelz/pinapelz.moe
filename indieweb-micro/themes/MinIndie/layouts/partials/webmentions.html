@@ -1,0 +1,153 @@
+<section id="comments" class="webmentions">
+  <h2 class="wm-title">Webmentions</h2>
+  <div id="mentions" class="wm-list">Loading…</div>
+</section>
+
+<style>
+.webmentions {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 2px dashed var(--hrcolor);
+}
+
+.webmentions .wm-title {
+  color: var(--titlecolor);
+  margin-bottom: 1rem;
+}
+
+/* Compact list */
+.wm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* More compact card */
+.wm {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+
+  background: var(--alertbgcolor);
+  border: 1px solid var(--hrcolor);
+
+  box-shadow: 0 0 6px rgba(255, 180, 220, 0.22);
+}
+
+/* Smaller avatar */
+.wm-author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(255, 140, 200, 0.35);
+}
+
+/* Body stays compact */
+.wm-body {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+/* Name */
+.wm-author-name a {
+  font-weight: 600;
+  color: var(--linkcolor);
+}
+
+.wm-type {
+  font-size: 0.8rem;
+  margin-top: 2px;
+  color: var(--titlecolor);
+}
+
+/* Tiny compact content bubble */
+.wm-content {
+  margin-top: 4px;
+  padding: 6px 8px;
+  font-size: 0.9rem;
+
+  background: var(--blockquotecolor);
+  border-left: 3px solid var(--hrcolor);
+  border-radius: 6px;
+}
+
+/* Meta line smaller */
+.wm-meta {
+  margin-top: 3px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* Mobile compact layout */
+@media (max-width: 800px) {
+  .wm {
+    flex-direction: column;
+    text-align: left;
+  }
+  .wm-author img {
+    margin-bottom: 4px;
+  }
+}
+</style>
+
+<script>
+async function loadMentions() {
+  const url =
+    "https://webmention.io/api/mentions.jf2?domain=micro.pinapelz.moe&token=hdjQAqlZwgJmSuPSiU8h8w";
+
+  const res = await fetch(url);
+  const data = await res.json();
+
+  const container = document.getElementById("mentions");
+  container.innerHTML = "";
+
+  if (!data.children || data.children.length === 0) {
+    container.innerHTML = "<p>No webmentions yet.</p>";
+    return;
+  }
+
+  data.children.forEach(m => {
+    const div = document.createElement("div");
+    div.className = "wm";
+
+    const author = m.author || {};
+    const content = m.content || {};
+    const type =
+      m["wm-property"] === "like-of" ? "liked this ❤️" :
+      m["wm-property"] === "repost-of" ? "reposted 🔁" :
+      m["wm-property"] === "in-reply-to" ? "replied 💬" :
+      "mentioned this";
+
+    const isLikeOrRepost = m["wm-property"] === "like-of" || m["wm-property"] === "repost-of";
+
+    div.innerHTML = `
+      <div class="wm-author">
+        <img src="${author.photo || ""}" alt="">
+      </div>
+
+      <div class="wm-body">
+        <div class="wm-author-name">
+          <a href="${author.url || "#"}" target="_blank">
+            ${author.name || "Unknown"}
+          </a>
+        </div>
+
+        <div class="wm-type">${type}</div>
+
+        ${!isLikeOrRepost && content.text ? `<div class="wm-content">${content.text}</div>` : ""}
+
+        <div class="wm-meta">
+          <a href="${m.url}" target="_blank">source</a> •
+          ${m["wm-received"]
+            ? new Date(m["wm-received"]).toLocaleString()
+            : ""}
+        </div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+loadMentions();
+</script>

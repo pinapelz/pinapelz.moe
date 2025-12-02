@@ -69,6 +69,7 @@
             {{ if .Site.Params.enableRelatedPages }}
                 {{ partial "article-related.html" . }}
             {{ end }}
+            {{ partial "webmentions.html" . }}
         </article>
     </main>
 {{ end }}
