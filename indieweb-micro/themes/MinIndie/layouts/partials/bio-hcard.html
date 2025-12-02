@@ -1,6 +1,11 @@
 <div class="h-card p-author bio-card" style="text-align:center;">
+    {{ if .Site.Params.Author.banner }}
+    <div class="banner" style="margin-bottom: 1rem; position: relative;">
+      <img class="u-featured" src="{{ .Site.Params.Author.banner }}" alt="Banner" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; opacity: 0.6;">
+      <img class="u-photo avatar" src="{{ .Site.Params.Author.avatar }}" alt="{{ .Site.Params.Author.name }}'s avatar" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    </div>
+    {{ end }}
     <div class="bio">
-      <img class="u-photo avatar" src="{{ .Site.Params.Author.avatar }}" alt="{{ .Site.Params.Author.name }}'s avatar">
       <p class="p-note">{{ .Site.Params.Author.Bio | safeHTML }}</p>
     </div>
     <p class="bio-name"><a href="{{ .Site.BaseURL }}" rel="me" class="p-nickname p-name u-url">{{ .Site.Params.Author.name }}</a></p>
