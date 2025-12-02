@@ -86,6 +86,17 @@
   opacity: 1;
 }
 
+/* Comments section header */
+.wm-comments-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--titlecolor);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* Regular webmentions (replies, mentions) */
 .wm-regular {
   display: flex;
@@ -157,6 +168,10 @@
   }
 
   .wm-reaction-title {
+    font-size: 1rem;
+  }
+
+  .wm-comments-header {
     font-size: 1rem;
   }
 }
@@ -282,6 +297,12 @@ async function loadMentions() {
   const regularMentionsToShow = [...replies, ...regularMentions];
 
   if (regularMentionsToShow.length > 0) {
+    // Add comments header
+    const commentsHeader = document.createElement("div");
+    commentsHeader.className = "wm-comments-header";
+    commentsHeader.textContent = "Comments";
+    container.appendChild(commentsHeader);
+
     const regularDiv = document.createElement("div");
     regularDiv.className = "wm-regular";
 
