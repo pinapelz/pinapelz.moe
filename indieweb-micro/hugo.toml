@@ -1,0 +1,63 @@
+languageCode = 'en-us'
+title = 'micro.pinapelz.moe'
+theme = "MinIndie"
+baseURL = "https://micro.pinapelz.moe"
+publishDir = "../micro.pinapelz.moe"
+
+[params]
+subtitle = "check it out. I'm in the house like carpet"
+dateFmt = "Monday, January 2, 2006"
+# tagPostOlderThanXDays = 555 # To display a message if the post is older than this number of days.
+# xslpath = "/rss.xsl" # If you want to theme your RSS feed. Optional.
+
+[params.author]
+    name = "Pinapelz"
+    email = "yukais@pinapelz.com"
+    avatar = "https://pinapelz.moe/assets/pfp.webp"
+    bio = '''hi, this is an informal (micro) blog of sorts. This site was made cause <a href="https://indieweb.org/">IndieWeb</a> seems like a great approach for the type of data agency I wanted out of social media (including the <a href="https://jointhefediverse.net">Fediverse</a> and <a href="https://atproto.com/">AtProto/Bluesky</a> at a fraction of the resources.<br/><br/>
+    There's a lot of stuff that doesn't fit well in a full-length formal blog post. I thought it'd be cool to have something like this on <a href="https://nekoweb.org">Nekoweb</a> since it fits the theme pretty well.'''
+[params.indieweb]
+    authorizationEndpoint = "https://indieauth.com/auth"
+    tokenEndpoint = "https://tokens.indieauth.com/token"
+    webmentionEndpoint = "https://webmention.io/micro.pinapelz.moe/webmention"
+    relmepgp = "/path/to//public/key.asc"
+    [[params.indieweb.relme]]
+        url = "https://github.com/pinapelz"
+    [[params.indieweb.relme]]
+        url = "mailto:yukais@pinapelz.com"
+    [[params.indieweb.relme]]
+         url = "https://sakurajima.social/@pinapelz"
+    [[params.indieweb.relme]]
+        url = "https://bsky.app/profile/pinapelz.moe"
+
+
+# Menus:
+[menu]
+[[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+
+[[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 2
+
+[[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+
+## Footer
+[[menu.footer]]
+    name = "Github"
+    url = "https://github.com/pinapelz"
+    weight = 1
+
+[[menu.footer]]
+    name = "pinapelz.moe"
+    url = "https://pinapelz.moe"
+    weight = 1

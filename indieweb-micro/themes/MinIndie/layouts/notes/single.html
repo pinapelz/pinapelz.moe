@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{ $ageDays := div (sub now.Unix .Date.Unix) 86400 }}
+    <main>
+        <article class="h-entry">
+            <div hidden>{{ partial "bio-hcard.html" . }}</div>
+            <div><b>
+                    <time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">
+                        {{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}
+                    </time>
+                    - <a href="{{ .Permalink }}" class="u-url u-uid" >Permalink</a>
+            </b></div>
+
+            {{- if or .Params.categories .Params.tags -}}
+                <div class="article-meta">
+                    {{- with .Params.categories -}}
+                        <span class="categories">
+                            Categories:
+                            {{ range . }}
+                                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                            {{ end }}
+                        </span>
+                    {{- end -}}
+                    {{- if and .Params.categories .Params.tags -}}
+                        --
+                    {{- end -}}
+                    {{- with .Params.tags -}}
+                        <span class="tags">
+                            Tags:
+                            {{ range . }}
+                                #<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="p-category">{{ . }}</a>
+                            {{ end }}
+                        </span>
+                    {{- end -}}
+                </div>
+            {{- end -}}
+
+            {{- partial "article-precontent.html" . -}}
+
+            <div class="e-content">
+                {{ .Content }}
+            </div>
+        </article>
+    </main>
+{{ end }}

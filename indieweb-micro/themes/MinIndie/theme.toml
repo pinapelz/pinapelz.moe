@@ -1,0 +1,17 @@
+name = "minindie"
+license = "MIT"
+licenselink = "https://git.sr.ht/~bacardi55/MinIndie/tree/main/item/LICENCE.md"
+description = "Minimal Hugo theme for the indieweb."
+homepage = "https://sr.ht/~bacardi55/MinIndie"
+tags = ["blog", "minimal", "monospace", "dark mode", "simple", "clean", "light", "responsive", "fast", "no-js", "no-tracking", "privacy", "indieweb"]
+features = ["blog", "privacy", "responsive", "fast", "indieweb"]
+min_version = "0.0.1"
+
+[author]
+  name = "bacardi55"
+  homepage = "bacardi55.io"
+
+[original]
+  author = "Morph"
+  homepage = "https://morph.sh"
+  repo = "https://github.com/colorchestra/smol"

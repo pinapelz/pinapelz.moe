@@ -1,0 +1,14 @@
+<hr />
+<footer>
+    <p>
+        {{- range .Site.Menus.footer }}
+            <a href="{{ .URL }}"><b>{{ .Name }}</b></a>.
+        {{- end }}
+    </p>
+
+    {{ partial "footer-extra.html" . }}
+
+    <p style="text-align: center" class="copyright">
+        &copy; <a href="{{ .Site.BaseURL }}"><b>{{ if .Site.Copyright }}{{ .Site.Copyright }}{{ else }}{{ .Site.Title }}{{ end }}</b></a>.
+    </p>
+</footer>

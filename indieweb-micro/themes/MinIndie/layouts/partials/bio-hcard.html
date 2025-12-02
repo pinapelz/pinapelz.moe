@@ -1,0 +1,8 @@
+<div class="h-card p-author bio-card" style="text-align:center;">
+    <div class="bio">
+      <img class="u-photo avatar" src="{{ .Site.Params.Author.avatar }}" alt="{{ .Site.Params.Author.name }}'s avatar">
+      <p class="p-note">{{ .Site.Params.Author.Bio | safeHTML }}</p>
+    </div>
+    <p class="bio-name"><a href="{{ .Site.BaseURL }}" rel="me" class="p-nickname p-name u-url">{{ .Site.Params.Author.name }}</a></p>
+</div>
+<hr/>

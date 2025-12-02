@@ -1,0 +1,44 @@
+{{ define "main" }}
+    <main>
+        <article class="h-entry">
+            <div hidden>{{ partial "bio-hcard.html" . }}</div>
+
+            <h1 class="p-name">
+                <a href="{{ .Params.bookmark_url }}" target="_blank" class="">
+                    {{ .Title }}
+                </a>
+            </h1>
+            <div><b>
+                <time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}
+                </time>
+                - <a href="{{ .Permalink }}" class="u-url u-uid" >Permalink</a>
+            </b></div>
+            <div class="tags">
+                Tags:
+                {{ range .Params.tags }}
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="p-category">{{ . }}</a>
+                {{ end }}
+            </div>
+
+            {{ with .Params.description }}
+                <div class="bookmark-description">
+                    Description:
+                    <blockquote>{{ . }}</blockquote>
+                </div>
+            {{ end }}
+
+            {{ with .Content }}
+                <div class="e-content justify">{{ . }}</div>
+            {{ end }}
+
+            <div>
+                → <a href="{{ .Params.bookmark_url }}" target="_blank" class="u-bookmark-of h-cite">
+                    {{ .Params.bookmark_url }}
+                </a><br /><br />
+            </div>
+
+            {{ partial "article-extra.html" . }}
+        </article>
+    </main>
+{{ end }}

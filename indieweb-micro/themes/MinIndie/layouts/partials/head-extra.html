@@ -1,0 +1,20 @@
+{{- range .Site.Params.indieweb.relme }}
+    <link rel="me" href="{{ .url }}" />
+{{- end -}}
+
+{{- with .Site.Params.indieweb.relmepgp -}}
+    <link rel="pgpkey" href="{{ . }}">
+{{- end -}}
+
+{{ with .Site.Params.indieweb }}
+  <link
+    rel="authorization_endpoint"
+    href="{{ .authorizationEndpoint | default "https://indieauth.com/auth" }}"
+  />
+  <link
+    rel="token_endpoint"
+    href="{{ .tokenEndpoint | default "https://tokens.indieauth.com/token" }}"
+  />
+  <link rel="webmention" href="{{ .webmentionEndpoint }}" />
+{{ end }}
+

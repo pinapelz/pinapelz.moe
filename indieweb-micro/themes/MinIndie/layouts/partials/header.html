@@ -1,0 +1,17 @@
+<header>
+    <div style="display:flex;flex-flow:row wrap;justify-content:space-between">
+        <div style="align-self:flex-start;">
+            {{ strings.Repeat ( .Site.Params.Author.Name | len | add 6 ) "=" }}<br>
+            == <a href="{{ .Site.BaseURL }}">{{ .Site.Params.Author.Name }}</a> ==<br>
+            {{ strings.Repeat ( .Site.Params.Author.Name | len | add 6 ) "=" }}
+        </div>
+        <div style="align-self:center;">{{ .Site.Params.subtitle }}</div>
+    </div>
+    <nav style="margin: 1rem auto;">
+        {{ with .Site.Menus.main }}
+            {{ range . }}
+                <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>.
+            {{ end }}
+        {{ end }}
+    </nav>
+</header>

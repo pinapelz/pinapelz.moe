@@ -1,0 +1,250 @@
+html {
+  overflow-y: scroll;
+}
+
+/* 🌸 PASTEL PALETTE */
+:root {
+  --bgcolor: #fff7fb;
+  --fontcolor: #3a2c3d;
+
+  --linkcolor: #ff77c8;
+  --visitedcolor: #d76dff;
+
+  --precolor: #4a3e4f;
+  --prebgcolor: #ffe6f4;
+
+  --alertbgcolor: #ffe0f1;
+  --hrcolor: #ffbde6;
+
+  --blockquotecolor: #ffe8f6;
+  --pcodecolor: #f7d2f0;
+
+  --sitetitlecolor: #ff99dd;
+  --titlecolor: #c77fff;
+}
+
+/* 🌙 DARK MODE PASTEL NIGHT */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bgcolor: #241b2b;
+    --fontcolor: #f8e8ff;
+
+    --linkcolor: #ff9be9;
+    --visitedcolor: #e49cff;
+
+    --precolor: #ffeefe;
+    --prebgcolor: #35263f;
+
+    --alertbgcolor: #3f304a;
+    --hrcolor: #f4cfff;
+
+    --blockquotecolor: #3a2b45;
+    --pcodecolor: #614c70;
+
+    --sitetitlecolor: #ffd1f6;
+    --titlecolor: #d9a7ff;
+  }
+}
+
+/* 🌸 TYPO + BASE */
+body {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 10px;
+
+  font: 15px/1.6 "IBM Plex Mono", "Fira Mono", monospace;
+  color: var(--fontcolor);
+  background: var(--bgcolor);
+
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 🌸 LINKS */
+a {
+  color: var(--linkcolor);
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+  color: var(--visitedcolor);
+  text-shadow: 0 0 6px currentColor;
+}
+
+a:visited {
+  color: var(--visitedcolor);
+}
+
+/* 🌸 HEADERS */
+h1, h2, h3 {
+  line-height: 1.25;
+  color: var(--titlecolor);
+  margin-top: 1.6rem;
+  font-weight: 700;
+}
+
+h1.site-title {
+  color: var(--sitetitlecolor);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* 🌸 PARAGRAPHS */
+p {
+  margin-top: 1.3rem;
+}
+
+/* 🌸 INLINE CODE */
+p > code,
+li > code {
+  color: var(--precolor);
+  background: var(--pcodecolor);
+  padding: 3px 5px;
+  border-radius: 6px;
+}
+
+/* 🌸 FULL CODE */
+code {
+  color: var(--precolor);
+  background: var(--prebgcolor);
+  padding: 3px 5px;
+  border-radius: 6px;
+}
+
+pre {
+  color: var(--precolor);
+  background: var(--prebgcolor);
+  padding: 24px;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 180, 220, 0.25);
+}
+
+/* 🌸 ARTICLES */
+article {
+  padding: 24px 0;
+}
+
+/* 🌸 IMAGES */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  border-radius: 12px;
+}
+
+/* cute avatar */
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 140, 200, 0.4);
+}
+
+/* 🌸 ALERTS */
+.alert {
+  color: var(--fontcolor);
+  background: var(--alertbgcolor);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 180, 220, 0.3);
+  overflow-x: auto;
+}
+
+/* 🌸 NEXT/PREV */
+.article-nextprev {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: space-between;
+}
+
+/* 🌸 DIVIDERS */
+hr {
+  margin: 35px 33% 15px;
+  border-color: var(--hrcolor);
+  border-width: 3px;
+  border-radius: 3px;
+}
+
+hr.small {
+  margin: 35px 44% 25px;
+  border: 1px dashed var(--hrcolor);
+}
+
+/* 🌸 BLOCKQUOTE */
+blockquote {
+  background: var(--blockquotecolor);
+  margin: 1.2rem 0;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(255, 200, 240, 0.25);
+  border-left: 4px solid var(--hrcolor);
+}
+
+/* 🌸 LISTS */
+ol, ul {
+  padding-left: 1.1rem;
+}
+
+ul > li {
+  list-style-type: disclosure-closed;
+}
+
+/* 🌸 TABLES */
+table {
+  text-align: left;
+  border: 1px solid var(--hrcolor);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead th, tfoot th, tfoot td {
+  padding: 6px 10px;
+  background-color: var(--alertbgcolor);
+  color: var(--titlecolor);
+}
+
+td {
+  padding: 8px 10px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--alertbgcolor);
+}
+
+/* 🌸 RESPONSIVE MOE */
+@media all and (max-width: 800px) {
+  .bio-card .bio {
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .bio-card .bio > img {
+    align-self: center;
+    margin: auto;
+  }
+  .bio-card .bio > p {
+    align-self: center;
+    text-align: center;
+  }
+}
+
+/* PRINT */
+@media print {
+  a, a:visited {
+    color: #000;
+    text-decoration: none;
+  }
+  a::after {
+    content: " (" attr(href) ") ";
+  }
+  nav, footer, hr, .noprint {
+    display: none !important;
+  }
+  pre, blockquote, code {
+    background: #fff;
+    border: none;
+    box-shadow: none;
+  }
+}

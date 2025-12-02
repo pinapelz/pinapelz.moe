@@ -1,0 +1,57 @@
+{{ define "main" }}
+<main class="content-list">
+    {{ $pageKind := .Kind }}
+    {{ if or .Title .Content }}
+    <div>
+      {{ if .Title }}
+          <h1>
+              {{ .Title }}
+              {{ partial "single-title-extra.html" . }}
+          </h1>
+      {{ end }}
+      {{ with .Content }}<div class="justify">{{ . }}</div>{{ end }}
+    </div>
+    {{ end }}
+
+    <div class="h-feed">
+        {{ $yearCptr := "" }}
+        {{ $monthCptr := "" }}
+        {{ range .Paginator.Pages }}
+            {{ $postYear := .Date.Year }}
+            {{ $postMonth := .Date.Month }}
+
+            {{ if or (ne $monthCptr $postMonth) (and (eq $yearCptr "") (eq $monthCptr "")) }}
+                    {{ $yearCptr = $postYear }}
+                    {{ $monthCptr = $postMonth }}
+                {{ if and (ne $yearCptr "") (ne $monthCptr "") }}
+            </ul>
+        </div>
+                {{ end  }}
+        <div>
+            <h3>{{ $monthCptr }} {{ $yearCptr }}</h3>
+            <ul>
+          {{ end }}
+
+          <li class="h-entry">
+              <div hidden>
+                  {{ partial "bio-hcard.html" . }}
+              </div>
+              <div class="post-title">
+                <time class="date dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02" }}</time>:
+                {{ if eq $pageKind "term" }}[{{ .Type }}] {{ end }}
+                <a href="{{ .Permalink }}" class="u-url p-name title">
+                  {{.Title }}
+                </a>
+              </div>
+            </li>
+
+          {{ $yearCptr = $postYear }}
+          {{ $monthCptr = $postMonth }}
+        {{ end }}
+        </ul>
+      </div>
+    </div>
+
+    {{ partial "pagination.html" . }}
+</main>
+{{ end }}
