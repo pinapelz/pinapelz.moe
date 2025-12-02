@@ -92,6 +92,7 @@
 </style>
 
 <script>
+const PAGE_URL = "{{ .Permalink }}";
 async function loadMentions() {
   const url =
     "https://webmention.io/api/mentions.jf2?domain=micro.pinapelz.moe&token=hdjQAqlZwgJmSuPSiU8h8w";
@@ -102,12 +103,28 @@ async function loadMentions() {
   const container = document.getElementById("mentions");
   container.innerHTML = "";
 
-  if (!data.children || data.children.length === 0) {
+  const mentions = data.children.filter(m => {
+    const t = m["wm-target"];
+    const inReply = m["in-reply-to"];
+    const likeOf = m["like-of"];
+    const repostOf = m["repost-of"];
+    const mentionOf = m["mention-of"];
+
+    return (
+      t === PAGE_URL ||
+      inReply === PAGE_URL ||
+      likeOf === PAGE_URL ||
+      repostOf === PAGE_URL ||
+      mentionOf === PAGE_URL
+    );
+  });
+
+  if (!mentions.length) {
     container.innerHTML = "<p>No webmentions yet.</p>";
     return;
   }
 
-  data.children.forEach(m => {
+  mentions.forEach(m => {
     const div = document.createElement("div");
     div.className = "wm";
 

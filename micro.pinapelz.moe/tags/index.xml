@@ -8,8 +8,15 @@
     <language>en-us</language>
     <managingEditor>yukais@pinapelz.com (Pinapelz)</managingEditor>
     <webMaster>yukais@pinapelz.com (Pinapelz)</webMaster>
-    <lastBuildDate>Mon, 01 Dec 2025 20:11:57 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 02 Dec 2025 00:22:32 -0800</lastBuildDate>
     <atom:link href="https://micro.pinapelz.moe/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arcade</title>
+      <link>https://micro.pinapelz.moe/tags/arcade/</link>
+      <pubDate>Tue, 02 Dec 2025 00:22:32 -0800</pubDate><author>yukais@pinapelz.com (Pinapelz)</author>
+      <guid>https://micro.pinapelz.moe/tags/arcade/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Default</title>
       <link>https://micro.pinapelz.moe/tags/default/</link>
