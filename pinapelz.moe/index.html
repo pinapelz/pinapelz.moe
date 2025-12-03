@@ -6,6 +6,7 @@
         <title>pinapelz.moe - u found it</title>
         <meta name="description" content="moe moe wow why did i make this" />
         <link rel="icon" href="assets/pfp.webp" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" type="text/css" href="styles/styles.css" />
         <link rel="stylesheet" type="text/css" href="styles/clock.css" />
         <link
@@ -20,6 +21,16 @@
                 font-family: "Press Start 2P", cursive;
                 font-size: 25px;
             }
+            @media (max-width: 768px) {
+                .marquee span {
+                    font-size: 16px;
+                }
+            }
+            @media (max-width: 480px) {
+                .marquee span {
+                    font-size: 12px;
+                }
+            }
         </style>
     </head>
     <body>
@@ -29,7 +40,7 @@
           <p class="p-note">check it out. I'm in the house like carpet</p>
         </div>
         <script src="/scripts/clock.js"></script>
-        <div class="container">
+        <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
             <div class="header">
                 <div class="header-content">
                     <div class="marquee">
@@ -84,24 +95,24 @@
                     </div>
                 </div>
             </div>
-            <div class="sidebar">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="/">home</a></li>
-                    <li><a href="/about.html">webmaster</a></li>
-                    <li><a href="/projects.html">projects</a></li>
+            <div class="flex flex-col xl:flex-row gap-6">
+            <div class="sidebar w-full xl:w-1/4 mb-6 xl:mb-0">
+                <h3 class="text-lg font-bold mb-3">Navigation</h3>
+                <ul class="mb-4">
+                    <li class="mb-1"><a href="/" class="hover:underline">home</a></li>
+                    <li class="mb-1"><a href="/about.html" class="hover:underline">webmaster</a></li>
+                    <li class="mb-1"><a href="/projects.html" class="hover:underline">projects</a></li>
                 </ul>
                 <img
                     src="assets/pfp.webp"
-                    class="border-img crazy-image"
-                    width="250px"
+                    class="border-img crazy-image w-full max-w-xs mx-auto block"
                     alt="Cute Anime GIF"
                 />
 
-                <div class="contacts-section">
-                    <h3>Contact Me</h3>
-                    <p>idk maybe you need to reach me for some reason</p>
-                    <ul>
+                <div class="contacts-section mt-4">
+                    <h3 class="text-lg font-bold mb-2">Contact Me</h3>
+                    <p class="mb-3 text-sm">idk maybe you need to reach me for some reason</p>
+                    <ul class="space-y-1 text-sm">
                         <li>
                             Email:
                             <a rel="me" href="mailto:pinapelz@moekyun.me"
@@ -126,7 +137,7 @@
                         <li>Discord: @pinapelz</li>
                     </ul>
                 </div>
-                <section id="discord-status" class="discord-status">
+                <section id="discord-status" class="discord-status flex-col sm:flex-row">
                     <img
                         src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
                         alt="Discord Avatar"
@@ -138,14 +149,14 @@
                         fetchDiscordStatus("246787839570739211");
                     </script>
                 </section>
-                <p id="quote"></p>
-                <iframe width="200" height="200" style="border:none" src="https://rubybulbs.net/neko.html"></iframe>
+                <p id="quote" class="my-4"></p>
+                <iframe class="w-full max-w-xs h-48 mx-auto block" style="border:none" src="https://rubybulbs.net/neko.html"></iframe>
             </div>
 
-            <div class="content">
-                <div class="welcome-box">
-                    <h2>Welcome!</h2>
-                    <p>
+            <div class="content w-full xl:w-3/4">
+                <div class="welcome-box mb-6">
+                    <h2 class="text-xl font-bold mb-3">Welcome!</h2>
+                    <p class="mb-3">
                         <blink>Ahoy!</blink> Thanks for visiting! I thought the
                         old Linktree like site was pretty boring for a
                         <span class="glitter">.moe</span> domain, so I took
@@ -153,54 +164,51 @@
                             >moeifyed</span
                         >" it!
                     </p>
-                    <p style="display: flex; align-items: center">
+                    <p class="flex items-center">
                         Hope you enjoy your stay!
                         <img
                             src="assets/xqcl.webp"
-                            width="35px"
-                            style="margin-left: 10px"
+                            class="w-8 h-8 ml-2"
+                            alt="xqcL"
                         />
                     </p>
                 </div>
 
-                <div class="general-section" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
-                    <div id="music-player" class="music-player" style="flex: 1;">
-                        <h3>Patchwork Radio</h3>
-                        <audio controls style="width: 100%">
+                <div class="general-section flex flex-col xl:flex-row gap-4 xl:gap-6 mb-6">
+                    <div id="music-player" class="music-player w-full xl:flex-1">
+                        <h3 class="text-lg font-bold mb-3">Patchwork Radio</h3>
+                        <audio controls class="w-full mb-3">
                             <source
                                 src="https://a4.asurahosting.com/listen/patchworkarchive/radio.mp3"
                                 type="audio/mpeg"
                             />
                             Your browser does not support the audio element.
                         </audio>
-                        <div id="now-playing" class="now-playing">
-                            <h4>Now Playing:</h4>
-                            <p id="song-title">Loading... 123</p>
-                            <p id="song-artist">
+                        <div id="now-playing" class="now-playing text-center">
+                            <h4 class="font-bold">Now Playing:</h4>
+                            <p id="song-title" class="text-sm">Loading... 123</p>
+                            <p id="song-artist" class="text-sm mb-2">
                                 plz be patient. radio might be down
                             </p>
-                            <a href="https://patchwork.moekyun.me/radio"
+                            <a href="https://patchwork.moekyun.me/radio" class="text-sm hover:underline"
                                 >Powered by Patchwork Archive</a
                             >
                         </div>
                     </div>
-                    <div style="flex-shrink: 0; text-align: center;">
+                    <div class="w-full xl:w-auto xl:flex-shrink-0 text-center">
                         <img
                             src="assets/growing.gif"
-                            height="300px"
                             alt="Rosemi Lovelock good morning"
-                            class="border-img"
+                            class="border-img max-h-40 xl:max-h-72 w-auto mx-auto"
                         />
                     </div>
-                    <div style="flex: 1;">
-                        <h3 style="text-align: center;"> <a href="https://micro.pinapelz.moe">micro.pinapelz.moe</a></h3>
-                        <a href="https://micro.pinapelz.moe">
+                    <div class="w-full xl:flex-1">
+                        <h3 class="text-center text-lg font-bold mb-3"> <a href="https://micro.pinapelz.moe" class="hover:underline">micro.pinapelz.moe</a></h3>
+                        <a href="https://micro.pinapelz.moe" class="block text-center">
                             <img
                                 src="assets/sayo-fries.gif"
-                                height="150px"
                                 alt="Sayo Hikawa eating fries"
-                                class="border-img tilt-hover"
-                                style="display: block; margin: 0 auto;"
+                                class="border-img tilt-hover max-h-32 lg:max-h-40 w-auto mx-auto mb-3"
                             />
                         </a>
                         <style>
@@ -219,87 +227,92 @@
                                 100% { transform: translateY(-20px) rotate(10deg) scale(1.1); }
                             }
                         </style>
-                        <p style="text-align: center;">my <a href="https://indieweb.org/">indieweb</a> micro blog bridged with fediverse and bluesky. short thoughts, updates, and random stuff</p>
-                        <a href="https://micro.pinapelz.moe" style="display: block; text-align: center;">check it out here</a>
+                        <p class="text-center text-sm mb-2">my <a href="https://indieweb.org/" class="hover:underline">indieweb</a> micro blog bridged with fediverse and bluesky. short thoughts, updates, and random stuff</p>
+                        <a href="https://micro.pinapelz.moe" class="block text-center hover:underline">check it out here</a>
                     </div>
                 </div>
-                <div id="clock" class="clock-widget"></div>
-                <div class="general-section" style="display: flex; justify-content: space-between; align-items: center;">
-                    <div style="width: 48%; border-right: 1px solid #000; padding-right: 10px;">
-                        <img src="assets/rg-tier.gif" alt="Grace from SDVX" class="border-img" style="width: 50%; height: auto; display: block; margin: 0 auto;" />
-                        <h3 style="text-align: center;"> <a href="/rhythm-games-tierlist.html">Rhythm Game Tierlist</a></h3>
-                        <p style="text-align: center;">my personal tierlist for rhythm games. I try to judge a series as a whole since most of them keep the same mechanics in sequels</p>
-                        <a href="/rhythm-games-tierlist.html" style="display: block; text-align: center;">check it out here</a>
+                <div id="clock" class="clock-widget mb-6"></div>
+                <div class="general-section flex flex-col xl:flex-row gap-4 mb-6">
+                    <div class="w-full xl:flex-1 xl:border-r xl:border-black xl:pr-4 mb-4 xl:mb-0">
+                        <img src="assets/rg-tier.gif" alt="Grace from SDVX" class="border-img w-1/2 lg:w-1/3 h-auto block mx-auto mb-3" />
+                        <h3 class="text-center text-lg font-bold mb-2"> <a href="/rhythm-games-tierlist.html" class="hover:underline">Rhythm Game Tierlist</a></h3>
+                        <p class="text-center text-sm mb-2">my personal tierlist for rhythm games. I try to judge a series as a whole since most of them keep the same mechanics in sequels</p>
+                        <a href="/rhythm-games-tierlist.html" class="block text-center hover:underline">check it out here</a>
                     </div>
-                    <div style="width: 48%; padding-left: 10px;">
-                     <p style="text-align: center;">can we just pretend there's something cool here?</p>
+                    <div class="w-full xl:flex-1 xl:pl-4 flex items-center justify-center">
+                     <p class="text-center">can we just pretend there's something cool here?</p>
                     </div>
                 </div>
 
-                <div class="general-section" style="font-size: 1.1em">
+                <div class="general-section grid grid-cols-1 lg:grid-cols-3 gap-4 text-lg">
                     <div>
-                        <h3>GitHub</h3>
-                        <p>
+                        <h3 class="text-lg font-bold mb-2">GitHub</h3>
+                        <p class="mb-3 text-sm">
                             nerdge programming <br />
                             + open source stuff 🤓
                         </p>
-                        <a href="https://github.com/pinapelz">
+                        <a href="https://github.com/pinapelz" class="hover:underline flex items-center">
                             <img
                                 src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
                                 alt="GitHub Logo"
-                                width="20"
-                                height="20"
-                                style="
-                                    vertical-align: middle;
-                                    margin-right: 5px;
-                                "
+                                class="w-5 h-5 mr-2"
                             />
                             github.com/pinapelz
                         </a>
                     </div>
 
                     <div>
-                        <h3>"Technical" Blog</h3>
-                        <p>
+                        <h3 class="text-lg font-bold mb-2">"Technical" Blog</h3>
+                        <p class="mb-3 text-sm">
                             random long-form rambling<br />
                             (usually technical or niche stuff)
                         </p>
-                        <a href="https://blog.pinapelz.com">
+                        <a href="https://blog.pinapelz.com" class="hover:underline">
                             blog.pinapelz.com
                         </a>
                     </div>
                     <div>
-                        <h3>Super Secret Link</h3>
-                        <p>
+                        <h3 class="text-lg font-bold mb-2">Super Secret Link</h3>
+                        <p class="mb-3 text-sm">
                             mystery link for true vtuber degens<br />
                             I'll change it from time to time
                         </p>
-                        <a href="https://link.moekyun.me/Y4z40E">
+                        <a href="https://link.moekyun.me/Y4z40E" class="hover:underline">
                             🔒 https://link.moekyun.me/Y4z40E
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="footer">
-                <div class="footer-links"></div>
-                    <p>
-                        <a href="https://pinapelz.moe">pinapelz.moe</a> /
-                        <a href="https://pinapelz.com">pinapelz.com</a> /
-                        <a href="https://arcade.pinapelz.com">arcade.moekyun.me</a> /
-                        <a href="https://phase-tracker.com">phase-tracker.com</a> /
-                        <a href="https://patchwork.moekyun.me">patchwork.moekyun.me</a> /
-                        <a href="https://blog.pinapelz.com">blog.pinapelz.com</a> /
-                        <a href="https://mojibaka.pinapelz.com">mojibaka.pinapelz.com</a> /
-                        <a href="https://moekyun.me">moekyun.me</a> /
-                        <a href="https://vtuber-captcha.moekyun.me">vtuber-captcha.moekyun.me</a>
+            </div>
+            <div class="footer text-center pt-6 mt-6 text-xs">
+                <div class="footer-links mb-4">
+                    <p class="flex flex-wrap justify-center gap-x-2 gap-y-1 text-xs sm:text-sm">
+                        <span><a href="https://pinapelz.moe" class="hover:underline break-all">pinapelz.moe</a></span>
+                        <span>/</span>
+                        <span><a href="https://pinapelz.com" class="hover:underline break-all">pinapelz.com</a></span>
+                        <span>/</span>
+                        <span><a href="https://arcade.pinapelz.com" class="hover:underline break-all">arcade.moekyun.me</a></span>
+                        <span>/</span>
+                        <span><a href="https://phase-tracker.com" class="hover:underline break-all">phase-tracker.com</a></span>
+                        <span>/</span>
+                        <span><a href="https://patchwork.moekyun.me" class="hover:underline break-all">patchwork.moekyun.me</a></span>
+                        <span>/</span>
+                        <span><a href="https://blog.pinapelz.com" class="hover:underline break-all">blog.pinapelz.com</a></span>
+                        <span>/</span>
+                        <span><a href="https://mojibaka.pinapelz.com" class="hover:underline break-all">mojibaka.pinapelz.com</a></span>
+                        <span>/</span>
+                        <span><a href="https://moekyun.me" class="hover:underline break-all">moekyun.me</a></span>
+                        <span>/</span>
+                        <span><a href="https://vtuber-captcha.moekyun.me" class="hover:underline break-all">vtuber-captcha.moekyun.me</a></span>
                     </p>
-                    <a href="https://nekoweb.org/"
-                    ><img src="https://nekoweb.org/assets/buttons/button7.gif"
-                /></a>
-                <a href="https://linux.org/"
-                    ><img
-                        src="https://adriansblinkiecollection.neocities.org/buttons/a46.jpg"
-                /></a>
+                </div>
+                <div class="flex justify-center gap-2">
+                    <a href="https://nekoweb.org/">
+                        <img src="https://nekoweb.org/assets/buttons/button7.gif" alt="Nekoweb" />
+                    </a>
+                    <a href="https://linux.org/">
+                        <img src="https://adriansblinkiecollection.neocities.org/buttons/a46.jpg" alt="Linux" />
+                    </a>
                 </div>
 
             </div>

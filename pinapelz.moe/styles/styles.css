@@ -9,9 +9,6 @@ body {
     cursor: url("cursor.gif"), auto;
 }
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
     border-width: 10px;
     border-style: solid;
     border-image: url("border.webp") 9 fill round;
@@ -19,13 +16,12 @@ body {
 }
 
 .sidebar {
-    float: left;
-    width: 25%;
     padding: 10px;
     margin-top: 30px;
     border: solid #ffb6c1 2px;
     background: #ffe4e1;
     text-align: center;
+    overflow-wrap: break-word;
 }
 
 .sidebar ul {
@@ -49,16 +45,17 @@ body {
 }
 
 .content {
-    float: right;
-    width: 70%;
     padding: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 .footer {
-    clear: both;
     text-align: center;
     padding-top: 30px;
     margin-top: 20px;
     font-size: 0.8em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 a {
     color: #ff69b4;
@@ -122,9 +119,8 @@ blink {
     padding: 10px;
     background: #ffebf0;
     border: solid #ffb6c1 2px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .general-section h3 {
@@ -135,7 +131,6 @@ blink {
 .general-section ul {
     list-style-type: disc;
     padding-left: 20px;
-    flex: 1;
 }
 
 .general-section ul li {
@@ -250,52 +245,69 @@ blink {
     visibility: visible;
 }
 
-@media (max-width: 1024px) {
-    .container {
-        width: 90%;
-    }
-
-    .main-content {
-        flex-direction: column;
-    }
-
-    .sidebar,
-    .content {
-        width: 100%;
-    }
-}
-
-/* Media Queries for Mobile Devices */
+/* Mobile-specific overrides for custom elements */
 @media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 10px;
+    .header-animation img {
+        width: 30px;
+        height: 30px;
     }
-    .sidebar,
-    .content {
-        float: none;
-        width: 100%;
-        margin-top: 10px;
-    }
-    .header {
-        font-size: 1.5em;
-    }
-    .footer {
-        font-size: 0.7em;
-    }
+    
     .discord-status {
         flex-direction: column;
         align-items: flex-start;
     }
+    
     .discord-status img {
         margin-right: 0;
         margin-bottom: 10px;
     }
+    
     .discord-status h2 {
         font-size: 1rem;
     }
+    
     .discord-status p {
         font-size: 0.9rem;
+    }
+    
+    .crazy-image {
+        max-width: 200px;
+    }
+    
+    /* Ensure no horizontal overflow */
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-animation img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .crazy-image {
+        max-width: 150px;
+    }
+    
+    /* Further mobile optimizations */
+    .general-section {
+        padding: 8px;
+        margin-top: 15px;
+    }
+    
+    .sidebar {
+        padding: 8px;
+        margin-top: 20px;
+    }
+    
+    .content {
+        padding: 8px;
     }
 }
 
@@ -312,8 +324,6 @@ blink {
     padding: 10px;
     background: #ffebf0;
     border: dotted #ffb6c1 2px;
-    display: inline-block;
-    vertical-align: top;
 }
 
 .music-player h3 {
