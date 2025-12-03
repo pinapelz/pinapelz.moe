@@ -1,0 +1,66 @@
+{{ define "main" }}
+{{ $ageDays := div (sub now.Unix .Date.Unix) 86400 }}
+    <main>
+        <article class="h-entry">
+            <a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden="from-humans"></a>
+            <h1 class="p-name">{{ .Title }}</h1>
+            <div hidden>{{ partial "bio-hcard.html" . }}</div>
+
+            {{- if or .Params.categories .Params.tags -}}
+                <div class="article-meta">
+                    {{- with .Params.categories -}}
+                        <span class="categories">
+                            Categories:
+                            {{ range . }}
+                                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                            {{ end }}
+                        </span>
+                    {{- end -}}
+                    {{- if and .Params.categories .Params.tags -}}
+                        --
+                    {{- end -}}
+                    {{- with .Params.tags -}}
+                        <span class="tags">
+                            Tags:
+                            {{ range . }}
+                                #<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="p-category">{{ . }}</a>
+                            {{ end }}
+                        </span>
+                    {{- end -}}
+                </div>
+            {{- end -}}
+
+            {{- with .Site.Params.tagPostOlderThanXDays -}}
+                {{- if and (gt $ageDays .) (eq $.Type "posts") -}}
+                    {{ partial "article-old-content.html" . }}
+                {{- end -}}
+            {{- end -}}
+
+            {{- partial "article-precontent.html" . -}}
+
+            {{- if .Params.toc -}}
+                <div class="toc noprint">
+                    <h2>Table of Content</h2>
+                    <aside>
+                        {{ .TableOfContents }}
+                    </aside>
+                </div>
+            {{- end -}}
+
+            <div class="e-content">
+                {{ .Content }}
+            </div>
+
+            {{ partial "article-extra.html" . }}
+
+            {{ if .Site.Params.enableNextPrevPages }}
+                {{ partial "article-prevnext.html" . }}
+            {{ end }}
+
+            {{ if .Site.Params.enableRelatedPages }}
+                {{ partial "article-related.html" . }}
+            {{ end }}
+        </article>
+        <a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden="from-humans"></a>
+    </main>
+{{ end }}

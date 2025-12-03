@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Usage:
-#   ./overwrite-to-webp.sh /path/to/folder jpg
+#   ./prep-images.sh /path/to/folder jpg
 #
 # Arguments:
 #   1 = folder containing images
@@ -12,7 +12,7 @@ EXT="$2"
 
 if [ -z "$SRC_DIR" ] || [ -z "$EXT" ]; then
     echo "Usage: $0 <folder> <extension>"
-    echo "Example: ./overwrite-to-webp.sh ./photos jpg"
+    echo "Example: ./prep-images.sh ./photos jpg"
     exit 1
 fi
 

@@ -1,0 +1,31 @@
+.follow-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0.8rem;
+  margin: 0.6rem 0 0.6rem 0;
+  background: var(--card-bg, #f9f9f9);
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  font-size: 0.9rem;
+}
+
+.follow-card:hover {
+  background: var(--card-bg-hover, #f2f2f2);
+}
+
+.follow-target {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--link-color, #3366cc);
+  word-break: break-all;
+}
+
+.follow-target:hover {
+  text-decoration: underline;
+}
+
+.follow-date {
+  color: #777;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}

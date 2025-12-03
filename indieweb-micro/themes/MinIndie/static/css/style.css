@@ -259,13 +259,13 @@ tbody tr:nth-child(even) {
     align-self: center;
     text-align: center;
   }
-  
+
   /* Smaller avatar on mobile */
   .banner .avatar {
     width: 90px;
     height: 90px;
   }
-  
+
   .banner img:first-child {
     border-radius: 6px;
   }
