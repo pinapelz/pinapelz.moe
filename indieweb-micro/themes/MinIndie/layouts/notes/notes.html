@@ -24,7 +24,7 @@
             {{ .Content }}
           </p>
 
-          <time class="date dt-published" datetime="{{ .Date.Format "2006-01-02 15:04" }}">
+          <time class="date dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
             <a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-02 15:04" }}</a>
           </time>
 

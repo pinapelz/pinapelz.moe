@@ -32,7 +32,7 @@
                     <ul>
                 {{ end }}
                         <li>
-                            <time class="date dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+                            <time class="date dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
                             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                         </li>
                 {{ $currentType = .Type }}

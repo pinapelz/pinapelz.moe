@@ -8,7 +8,7 @@
 
             {{ if .Date }}
             <div><b>
-                    <time class="dt-published" datetime="{{ .Date.Format "2006-01-02" }}">
+                    <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
                         {{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}
                     </time>
                     - <a href="{{ .Permalink }}" class="u-url u-uid" >Permalink</a>

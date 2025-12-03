@@ -37,7 +37,7 @@
                   {{ partial "bio-hcard.html" . }}
               </div>
               <div class="post-title">
-                <time class="date dt-published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02" }}</time>:
+                <time class="date dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "02" }}</time>:
                 {{ if eq $pageKind "term" }}[{{ .Type }}] {{ end }}
                 <a href="{{ .Permalink }}" class="u-url p-name title">
                   {{.Title }}
