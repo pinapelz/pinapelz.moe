@@ -14,6 +14,9 @@ This is mostly here for pages that can receive [Webmentions](https://indieweb.or
 {{< follow "https://sakurajima.moe/@chikorita157" "2025-12-03" >}}
 {{< follow "https://misskey.io/@CAP_Tw" "2025-12-03" >}}
 {{< follow "https://misskey.io/@meeeeeeco" "2025-12-03" >}}
+{{< follow "https://sakurajima.moe/@sakurajima" "2025-12-03" >}}
+{{< follow "https://mi.shiromaru.work/@ovoip" "2025-12-03" >}}
+{{< follow "https://floss.social/@kde" "2025-12-03" >}}
 
 ## Bluesky
 {{< follow "https://bsky.app/profile/mofu.run" "2025-12-03" >}}
