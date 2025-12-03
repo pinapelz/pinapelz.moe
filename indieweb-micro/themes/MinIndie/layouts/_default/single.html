@@ -2,8 +2,8 @@
 {{ $ageDays := div (sub now.Unix .Date.Unix) 86400 }}
     <main>
         <article class="h-entry">
+            <a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden="from-humans"></a>
             <h1 class="p-name">{{ .Title }}</h1>
-
             <div hidden>{{ partial "bio-hcard.html" . }}</div>
 
             {{ if .Date }}
