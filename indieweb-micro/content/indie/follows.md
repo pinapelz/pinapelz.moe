@@ -15,6 +15,11 @@ This is mostly here for pages that can receive [Webmentions](https://indieweb.or
 {{< follow "https://floss.social/@kde" "2025-12-03" >}}
 {{< follow "https://mastodon.social/@gamingonlinux" "2025-12-03" >}}
 {{< follow "https://threads.net/@nintendeal" "2025-12-03" >}}
+{{< follow "https://mastodon.social/@Mastodon" "2025-12-04" >}}
+{{< follow "https://jvns.ca/@b0rk" "2025-12-04" >}}
+{{< follow "https://tippy.rabbithouse.garden/@serebii" "2025-12-04" >}}
+{{< follow "https://retro.pizza/@outofprintarchive" "2025-12-04" >}}
+{{< follow "https://peoplemaking.games/@nindiespotlight" "2025-12-04" >}}
 
 ## Bluesky
 {{< follow "https://bsky.app/profile/anew.social" "2025-12-03" >}}

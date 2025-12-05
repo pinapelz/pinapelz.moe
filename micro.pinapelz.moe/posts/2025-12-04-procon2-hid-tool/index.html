@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.152.2">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <style type=text/css>body{font-family:monospace;}</style>
-  <title>micro.pinapelz.moe | micro.pinapelz.moe</title>
+  <title>Enable HID Mode on Nintendo Pro Controller 2 | micro.pinapelz.moe</title>
   
   <meta name="author" content="map[avatar:https://files.catbox.moe/5r1pue.jpg banner:https://files.pinapelz.com/pso2ngs-2232-collab.png bio:yo! and he&#39;s more than a cover he&#39;s a quilt&lt;br/&gt;
     General arcade rhythm game enjoyer (SDVX, IIDX, CHUNITHM)&lt;br/&gt;
@@ -15,7 +14,7 @@
     Arch Linux &#43; Hyprland user (btw)&lt;br/&gt;
     Hi from the &lt;a href=&#34;https://indieweb.org/&#34;&gt;indieweb&lt;/a&gt;, if you are seeing me bridged elsewhere! email:yukais@pinapelz.com name:Pinapelz]">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="micro.pinapelz.moe">
+  
 
     
     <link rel="me" href="https://github.com/pinapelz" />
@@ -59,9 +58,12 @@
 </header>
 
   
-	<main>
-        <hr />
-        <h1 class="site-title">micro.pinapelz.moe</h1><div class="h-card p-author bio-card" style="text-align:center;">
+
+    <main>
+        <article class="h-entry">
+            <a class="u-bridgy-fed" href="https://fed.brid.gy/" hidden="from-humans"></a>
+            <h1 class="p-name">Enable HID Mode on Nintendo Pro Controller 2</h1>
+            <div hidden><div class="h-card p-author bio-card" style="text-align:center;">
     
     <div class="banner" style="margin-bottom: 1rem; position: relative;">
       <img class="u-featured" src="https://files.pinapelz.com/pso2ngs-2232-collab.png" alt="Banner" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; opacity: 0.6;">
@@ -79,18 +81,29 @@
     <p class="bio-name"><a href="https://micro.pinapelz.moe/" rel="me" class="p-nickname p-name u-url">Pinapelz</a></p>
 </div>
 <hr/>
+</div>
 
-
-    <article>
-	<h1><a href="https://micro.pinapelz.moe/posts/2025-12-04-procon2-hid-tool/">Enable HID Mode on Nintendo Pro Controller 2</a></h1>
-	<b><time>Thursday, December 4, 2025</time></b>
-	
-	<a href="/tags/code">code</a>
-	
-	<a href="/tags/nintendo">nintendo</a>
-	
-	<div>
-		<p>Switch 2 Pro Controller is very comfy in my hands, but unfortunately it didn&rsquo;t work out of box on PC (Linux) for me like it&rsquo;s predacessor. Until there&rsquo;s actual better driver support for this thing in the kernel (or Valve does something), here&rsquo;s a hacky Python script to initialize HID-mode on the controller</p>
+            
+            <div><b>
+                    <time class="dt-published" datetime="2025-12-04T23:19:29-08:00">
+                        Thursday, December 4, 2025
+                    </time>
+                    - <a href="https://micro.pinapelz.moe/posts/2025-12-04-procon2-hid-tool/" class="u-url u-uid" >Permalink</a>
+            </b></div>
+            <div class="article-meta"><span class="categories">
+                            Categories:
+                            
+                                <a href="/categories/tools">tools</a>
+                            
+                        </span>--<span class="tags">
+                            Tags:
+                            
+                                #<a href="/tags/code" class="p-category">code</a>
+                            
+                                #<a href="/tags/nintendo" class="p-category">nintendo</a>
+                            
+                        </span></div><div class="e-content">
+                <p>Switch 2 Pro Controller is very comfy in my hands, but unfortunately it didn&rsquo;t work out of box on PC (Linux) for me like it&rsquo;s predacessor. Until there&rsquo;s actual better driver support for this thing in the kernel (or Valve does something), here&rsquo;s a hacky Python script to initialize HID-mode on the controller</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># I only tested this script on Linux w/ Steam but in theory it shoud work on Windows?</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> usb.core <span style="color:#75715e"># install pyusb first: pip install pyusb</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> usb.util
@@ -226,90 +239,382 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
 </span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Unexpected error: </span><span style="color:#e6db74">{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
 </span></span></code></pre></div><p><strong>Steps</strong></p>
-		
-			<a href="https://micro.pinapelz.moe/posts/2025-12-04-procon2-hid-tool/">Read more...</a>
-		
-	</div>
-</article>
+<ol start="0">
+<li>(Optional) First Create a virtual environment</li>
+<li>Install pyusb via <code>pip install pyusb</code></li>
+<li>Plug your Pro Controller 2 in via USB</li>
+<li>Run the script</li>
+</ol>
+<p>If all 4 of the player indicator LEDs light up (the square ones near the charging port), then that means you should be good to go!</p>
+<p>You&rsquo;ll need to re-run this script each time you plug/unplug or restart your machine.</p>
+<p>This is pretty much a copy of the <a href="https://handheldlegend.github.io/procon2tool/">online Procon 2 Enabler Tool</a> but WebHID is dodgy on the Firefox fork I&rsquo;m using, plus its annoying having to open this page each time.</p>
 
+            </div>
 
-    <article>
-	<h1><a href="https://micro.pinapelz.moe/posts/2025-12-03-04-yt-music-rewind/">YouTube Music Recap 2025</a></h1>
-	<b><time>Wednesday, December 3, 2025</time></b>
-	
-	<a href="/tags/anime">anime</a>
-	
-	<div>
-		<p>Its all Bandori. At least 75% of that MyGO!!!!! listening time was probably Haruhikage since I came back to Bandori and had to catch up before watching Ave Mujica anime.</p>
-<figure><img src="https://files.catbox.moe/tsquqc.jpg"
-    alt="YouTube Music Recap Top 5 Artists In Order: MyGO!!!!!, Yumenokessho, Ave Mujica, KMNZ, Roselia" width="300">
-</figure>
-		
-	</div>
-</article>
+            
 
+            
 
-    <article>
-	<h1><a href="https://micro.pinapelz.moe/posts/2025-12-02-power-bank-recall/">INIU Power Bank Gets Recall</a></h1>
-	<b><time>Tuesday, December 2, 2025</time></b>
-	
-	<a href="/tags/default">default</a>
-	
-	<div>
-		<p>It would seem that I, along with what seems like the entirety of <a href="https://www.reddit.com/r/amazonprime/comments/1pcq5ug/how_to_get_customer_support_for_recall_iniu/">Reddit</a> bought the same cheap 10000mAh power bank and now its getting recalled.</p>
-<p>I wonder if it has anything to do with the poor quality they found in that viral <a href="https://www.lumafield.com/first-article/posts/whats-hiding-inside-haribos-power-bank-and-headphones">Haribo Powerbank</a>. Not sure since I&rsquo;ve had this one for a long time. I guess I really got what I paid for, shame cause it really is super slim and works well.</p>
-		
-			<a href="https://micro.pinapelz.moe/posts/2025-12-02-power-bank-recall/">Read more...</a>
-		
-	</div>
-</article>
+            
+            <section id="comments" class="webmentions">
+  <h2 class="wm-title">Webmentions</h2>
+  <div id="mentions" class="wm-list">Loading…</div>
+</section>
 
+<style>
+.webmentions {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 2px dashed var(--hrcolor);
+}
 
-    <article>
-	<h1><a href="https://micro.pinapelz.moe/posts/2025-12-02-china-town-fair/">China Town Fair</a></h1>
-	<b><time>Tuesday, December 2, 2025</time></b>
-	
-	<a href="/tags/arcade">arcade</a>
-	
-	<div>
-		<p>Visited New York during the Thanksgiving break and had a chance to stopped by one of the most legendary landmarks North American arcade gaming history.</p>
-<figure><img src="/posts/2025-12-02-china-town-fair/outside-ctf.webp"
-    alt="China Town Fair Outside">
-</figure>
+.webmentions .wm-title {
+  color: var(--titlecolor);
+  margin-bottom: 1rem;
+}
 
-<p>Also yep you&rsquo;re reading that right, it indeed once home to a <a href="https://davidpotorti.substack.com/p/the-dancing-chicken">dancing chicken as well as one that played tic tac toe</a>.</p>
-<p>But apart from just being an old arcade, it was also home to one of the largest competitive arcade game fighting scene (Marvel vs Capcom, Street Fighter, etc.). Many of NAs top players frequented this arcade. However, as we all already know video arcades began to die down during the early 2000s and China Town Fair was no exception having closed in 2011.</p>
-		
-			<a href="https://micro.pinapelz.moe/posts/2025-12-02-china-town-fair/">Read more...</a>
-		
-	</div>
-</article>
+.wm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
+ 
+.wm-reactions {
+  margin-bottom: 1.5rem;
+}
 
-    <article>
-	<h1><a href="https://micro.pinapelz.moe/posts/2025-12-01-hello-world/">Hello World - Why This</a></h1>
-	<b><time>Monday, December 1, 2025</time></b>
-	
-	<a href="/tags/default">default</a>
-	
-	<div>
-		<p>I think having control of your own data is great. The same is true for decentralized social media. I&rsquo;ve always been a primary user of microblog platforms (like Twitter/X). Having experienced both the traditional and &ldquo;decentralized&rdquo; approaches to microblogs, they both have some particular shortcoming in terms of what I want to get out of &ldquo;social media&rdquo;.</p>
-<h2 id="twitterx">Twitter/X</h2>
-<p>This is fairly self explanatory. The rebranding of Twitter to X and Musk&rsquo;s new ownership of the platform shifted the direction of the platform to be ever more political. X Premium boosting visibility is also something I wasn&rsquo;t a particular fan of. You can&rsquo;t view anything without signing in either, so goodbye viewing stuff anonymously. There&rsquo;s just a lot of &ldquo;features&rdquo; here I&rsquo;m not a fan of. Needless to say, there&rsquo;s a lot of reasons to not post stuff there.</p>
-		
-			<a href="https://micro.pinapelz.moe/posts/2025-12-01-hello-world/">Read more...</a>
-		
-	</div>
-</article>
+.wm-reaction-group {
+  margin-bottom: 1rem;
+}
 
+.wm-reaction-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--titlecolor);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
 
-<div>
+.wm-avatar-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
 
-1 of 1
+.wm-avatar {
+  position: relative;
+  display: inline-block;
+}
 
-</div>
+.wm-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--hrcolor);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-</main>
+.wm-avatar:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 140, 200, 0.4);
+}
+
+.wm-avatar-tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--blockquotecolor);
+  color: var(--titlecolor);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  border: 1px solid var(--hrcolor);
+}
+
+.wm-avatar:hover .wm-avatar-tooltip {
+  opacity: 1;
+}
+
+ 
+.wm-comments-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--titlecolor);
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+ 
+.wm-regular {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.wm {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  background: var(--alertbgcolor);
+  border: 1px solid var(--hrcolor);
+  box-shadow: 0 0 6px rgba(255, 180, 220, 0.22);
+}
+
+.wm-author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(255, 140, 200, 0.35);
+}
+
+.wm-body {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.wm-author-name a {
+  font-weight: 600;
+  color: var(--linkcolor);
+}
+
+.wm-type {
+  font-size: 0.8rem;
+  margin-top: 2px;
+  color: var(--titlecolor);
+}
+
+.wm-content {
+  margin-top: 4px;
+  padding: 6px 8px;
+  font-size: 0.9rem;
+  background: var(--blockquotecolor);
+  border-left: 3px solid var(--hrcolor);
+  border-radius: 6px;
+}
+
+.wm-meta {
+  margin-top: 3px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.wm-meta a {
+  color: var(--linkcolor);
+}
+
+ 
+@media (max-width: 600px) {
+  .wm-avatar img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .wm-avatar-grid {
+    gap: 3px;
+  }
+
+  .wm-reaction-title {
+    font-size: 1rem;
+  }
+
+  .wm-comments-header {
+    font-size: 1rem;
+  }
+}
+</style>
+
+<script>
+const PAGE_URL = "https:\/\/micro.pinapelz.moe\/posts\/2025-12-04-procon2-hid-tool\/";
+
+async function loadMentions() {
+  const url =
+    "https://webmention.io/api/mentions.jf2?domain=micro.pinapelz.moe&token=hdjQAqlZwgJmSuPSiU8h8w";
+
+  const res = await fetch(url);
+  const data = await res.json();
+
+  const container = document.getElementById("mentions");
+  container.innerHTML = "";
+
+  
+  const mentions = data.children.filter(m => {
+    const t = m["wm-target"];
+    const inReply = m["in-reply-to"];
+    const likeOf = m["like-of"];
+    const repostOf = m["repost-of"];
+    const mentionOf = m["mention-of"];
+
+    return (
+      t === PAGE_URL ||
+      inReply === PAGE_URL ||
+      likeOf === PAGE_URL ||
+      repostOf === PAGE_URL ||
+      mentionOf === PAGE_URL
+    );
+  });
+
+  if (!mentions.length) {
+    container.innerHTML = "<p>No webmentions yet.</p>";
+    return;
+  }
+
+  
+  const likes = mentions.filter(m => m["wm-property"] === "like-of");
+  const reposts = mentions.filter(m => m["wm-property"] === "repost-of");
+  const replies = mentions.filter(m => m["wm-property"] === "in-reply-to");
+  const regularMentions = mentions.filter(m =>
+    !["like-of", "repost-of", "in-reply-to"].includes(m["wm-property"])
+  );
+
+  
+  const reactionsDiv = document.createElement("div");
+  reactionsDiv.className = "wm-reactions";
+
+  
+  if (reposts.length > 0) {
+    const repostGroup = document.createElement("div");
+    repostGroup.className = "wm-reaction-group";
+
+    const repostTitle = document.createElement("div");
+    repostTitle.className = "wm-reaction-title";
+    repostTitle.textContent = `${reposts.length} Repost${reposts.length !== 1 ? 's' : ''}`;
+
+    const repostGrid = document.createElement("div");
+    repostGrid.className = "wm-avatar-grid";
+
+    reposts.forEach(mention => {
+      const author = mention.author || {};
+      const avatarDiv = document.createElement("div");
+      avatarDiv.className = "wm-avatar";
+
+      avatarDiv.innerHTML = `
+        <a href="${author.url || "#"}" target="_blank">
+          <img src="${author.photo || ""}" alt="${author.name || 'Unknown'}" />
+        </a>
+        <div class="wm-avatar-tooltip">${author.name || 'Unknown'}</div>
+      `;
+
+      repostGrid.appendChild(avatarDiv);
+    });
+
+    repostGroup.appendChild(repostTitle);
+    repostGroup.appendChild(repostGrid);
+    reactionsDiv.appendChild(repostGroup);
+  }
+
+  
+  if (likes.length > 0) {
+    const likeGroup = document.createElement("div");
+    likeGroup.className = "wm-reaction-group";
+
+    const likeTitle = document.createElement("div");
+    likeTitle.className = "wm-reaction-title";
+    likeTitle.textContent = `${likes.length} Like${likes.length !== 1 ? 's' : ''}`;
+
+    const likeGrid = document.createElement("div");
+    likeGrid.className = "wm-avatar-grid";
+
+    likes.forEach(mention => {
+      const author = mention.author || {};
+      const avatarDiv = document.createElement("div");
+      avatarDiv.className = "wm-avatar";
+
+      avatarDiv.innerHTML = `
+        <a href="${author.url || "#"}" target="_blank">
+          <img src="${author.photo || ""}" alt="${author.name || 'Unknown'}" />
+        </a>
+        <div class="wm-avatar-tooltip">${author.name || 'Unknown'}</div>
+      `;
+
+      likeGrid.appendChild(avatarDiv);
+    });
+
+    likeGroup.appendChild(likeTitle);
+    likeGroup.appendChild(likeGrid);
+    reactionsDiv.appendChild(likeGroup);
+  }
+
+  
+  if (reactionsDiv.children.length > 0) {
+    container.appendChild(reactionsDiv);
+  }
+
+  
+  const regularMentionsToShow = [...replies, ...regularMentions];
+
+  if (regularMentionsToShow.length > 0) {
+    
+    const commentsHeader = document.createElement("div");
+    commentsHeader.className = "wm-comments-header";
+    commentsHeader.textContent = "Comments";
+    container.appendChild(commentsHeader);
+
+    const regularDiv = document.createElement("div");
+    regularDiv.className = "wm-regular";
+
+    regularMentionsToShow.forEach(m => {
+      const div = document.createElement("div");
+      div.className = "wm";
+
+      const author = m.author || {};
+      const content = m.content || {};
+      const type =
+        m["wm-property"] === "in-reply-to" ? "replied 💬" :
+        "mentioned this";
+
+      div.innerHTML = `
+        <div class="wm-author">
+          <img src="${author.photo || ""}" alt="${author.name || 'Unknown'}">
+        </div>
+
+        <div class="wm-body">
+          <div class="wm-author-name">
+            <a href="${author.url || "#"}" target="_blank">
+              ${author.name || "Unknown"}
+            </a>
+          </div>
+
+          <div class="wm-type">${type}</div>
+
+          ${content.text ? `<div class="wm-content">${content.text}</div>` : ""}
+
+          <div class="wm-meta">
+            <a href="${m.url}" target="_blank">source</a> •
+            ${m["wm-received"]
+              ? new Date(m["wm-received"]).toLocaleString()
+              : ""}
+          </div>
+        </div>
+      `;
+      regularDiv.appendChild(div);
+    });
+
+    container.appendChild(regularDiv);
+  }
+
+  
+  if (container.children.length === 0) {
+    container.innerHTML = "<p>No webmentions yet.</p>";
+  }
+}
+
+loadMentions();
+</script>
+
+        </article>
+    </main>
 
   <hr />
 <footer>
