@@ -8,126 +8,198 @@
         <link rel="icon" href="assets/pfp.webp" />
         <link rel="stylesheet" type="text/css" href="styles/styles.css" />
         <script src="scripts/index.js"></script>
+        <style>
+            @keyframes rainbow {
+                0% { color: #ff0000; }
+                20% { color: #ff8800; }
+                40% { color: #ffff00; }
+                60% { color: #00ff00; }
+                80% { color: #0088ff; }
+                100% { color: #ff00ff; }
+            }
+
+            .rainbow-text {
+                animation: rainbow 4s linear infinite;
+                font-weight: bold;
+            }
+
+            @keyframes blink {
+                0%, 50% { opacity: 1; }
+                51%, 100% { opacity: 0; }
+            }
+
+            .blink {
+                animation: blink 1.5s infinite;
+            }
+
+            .retro-shadow {
+                text-shadow: 2px 2px 0px #ff69b4, 4px 4px 0px #ffb6c1;
+            }
+
+            .y2k-border {
+                border: 2px ridge #ff1493;
+                padding: 10px;
+                background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,182,193,0.3) 100%);
+            }
+
+            .content h3 {
+                background: linear-gradient(90deg, #ffb6c1, #ff69b4, #ff1493, #ff69b4, #ffb6c1);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-size: 1.5em;
+                text-transform: uppercase;
+            }
+
+            .sites {
+                border: 3px double #ff69b4;
+                padding: 10px;
+                margin: 10px 0;
+                background: repeating-linear-gradient(
+                    45deg,
+                    #ffe4e1,
+                    #ffe4e1 10px,
+                    #ffb6c1 10px,
+                    #ffb6c1 20px
+                );
+            }
+
+            .sparkle {
+                background-image: url('https://www.animatedimages.org/data/media/52/animated-star-image-0116.gif');
+                background-repeat: no-repeat;
+                background-position: right center;
+                background-size: 20px 20px;
+                padding-right: 25px;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
-            <div class="header">
-                <marquee behavior="alternate" direction="left">
-                    About Me
+            <div class="header" style="margin-top: 20px;">
+                <marquee behavior="alternate" direction="left" scrollamount="6">
+                    <span class="rainbow-text">☆゜・。。・゜゜・。。・゜★</span>
+                    <span class="retro-shadow">About Me</span>
+                    <span class="rainbow-text">★゜・。。・゜゜・。。・゜☆</span>
                 </marquee>
             </div>
 
             <div class="sidebar">
-                <h3>Navigation</h3>
+                <h3 class="sparkle">Navigation</h3>
                 <ul>
-                    <li><a href="/">home</a></li>
-                    <li><a href="/about.html">webmaster</a></li>
-                    <li><a href="/projects.html">projects</a></li>
+                    <li><a href="/">🏠 home</a></li>
+                    <li><a href="/about.html">👤 webmaster</a></li>
+                    <li><a href="/projects.html">💻 projects</a></li>
                 </ul>
                 <img
                     src="assets/pfp.webp"
                     class="border-img crazy-image"
                     width="250px"
-                    alt="Cute Anime GIF"
+                    alt="Profile Picture"
+                    style="border: 3px ridge #ff1493; box-shadow: 5px 5px 15px rgba(255,20,147,0.5);"
                 />
 
-                <div class="contacts-section">
-                    <h3>Contact Me</h3>
-                    <p>idk maybe you need to reach me for some reason</p>
+                <div class="contacts-section y2k-border">
+                    <h3>📧 Contact Me 📧</h3>
+                    <p><small>idk maybe you need to reach me for some reason</small></p>
                     <ul>
                         <li>
-                            Email:
-                            <a href="mailto:pinapelz@moekyun.me"
-                                >pinapelz@moekyun.me</a
-                            >
+                            <span class="blink">►</span> Email:
+                            <a href="mailto:pinapelz@moekyun.me">pinapelz@moekyun.me</a>
                         </li>
                         <li>
-                            X: <a href="https://x.com/pinapelz">@pinapelz</a>
+                            <span class="blink">►</span> X:
+                            <a href="https://x.com/pinapelz">@pinapelz</a>
                         </li>
                         <li>
-                            Fedi:
-                            <a href="https://sakurajima.social/@pinapelz"
-                                >@pinapelz@sakurajima.social</a
-                            >
+                            <span class="blink">►</span> Fedi:
+                            <a href="https://sakurajima.social/@pinapelz">@pinapelz@sakurajima.social</a>
                         </li>
                         <li>
-                            Bluesky:
-                            <a href="https://bsky.app/profile/pinapelz.moe"
-                                >@pinapelz.moe</a
-                            >
+                            <span class="blink">►</span> Bluesky:
+                            <a href="https://bsky.app/profile/pinapelz.moe">@pinapelz.moe</a>
                         </li>
-                        <li>Discord: @pinapelz</li>
+                        <li>
+                            <span class="blink">►</span> Discord: @pinapelz
+                        </li>
+
+
                     </ul>
                 </div>
-                <section id="discord-status" class="discord-status">
-                    <img
-                        src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
-                        alt="Discord Avatar"
-                    />
 
-                    <div class="status-container">
-                        <h2><span class="status-text"></span></h2>
-                    </div>
-                    <script>
-                        fetchDiscordStatus("246787839570739211");
-                    </script>
-                </section>
             </div>
 
             <div class="content">
                 <div class="general-section center">
-                    <h3>info</h3>
-                    <ul style="list-style-type: none">
-                        <li>
-                            Student at UC Irvine studying Software Engineering
-                        </li>
-                        <li>Daily drives Arch Linux</li>
-                        <li>Mainly on Hyprland and KDE Plasma</li>
-                        <li>Watches anime and reads manga</li>
-                        <li>
-                            Accumulates brainrot from watching Twitch streams
-                            and VTubers
-                        </li>
-                    </ul>
-                    <h3>games</h3>
-                    <ul style="list-style-type: none">
-                        <li>MMOs - FFXIV, PSO2, OSRS</li>
-                        <li>(J)RPGs - Persona, Xenoblade</li>
-                        <li>
-                            Visual Novel/Adventure - Danganronpa, AI The
-                            Sommnium, 999
-                        </li>
-                    </ul>
-                    <p>basically stuff that is heavy on the story</p>
-                    <h3>anime/manga</h3>
-                    <p>
-                        I pretty much only watch/read slice of life... yuru
-                        camp, k-on, nichijou that sorta thing
-                    </p>
-                    <h3>vtubers</h3>
-                    <p>
-                        mostly watch erina makina (pc), rosemi lovelock (niji),
-                        and pavolia reine (holo)
-                    </p>
-                    <h3>stack</h3>
-                    <p>
-                        whatever seems fun (but usually next js + tailwind +
-                        flask)
-                    </p>
-                    <p>
-                        Not much else to say... if you want some random
-                        technical rambling go to
-                        <a href="https://blog.pinapelz.com">my blog</a>
-                    </p>
+                    <div class="y2k-border" style="margin-bottom: 20px;">
+                        <h3>⚡ info ⚡</h3>
+                        <ul style="list-style-type: none; text-align: left;">
+                            <li>🎓 Student at UC Irvine studying Software Engineering</li>
+                            <li>🐧 Daily drives Arch Linux</li>
+                            <li>💻 Mainly on Hyprland and KDE Plasma</li>
+                            <li>📺 Watches anime and reads manga</li>
+                            <li>🧠 Accumulates brainrot from watching Twitch streams and VTubers</li>
+                        </ul>
+                        <section id="discord-status" class="discord-status">
+                            <img
+                                src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
+                                alt="Discord Avatar"
+                            />
+                            <div class="status-container">
+                                <h2><span class="status-text"></span></h2>
+                            </div>
+                            <script>
+                                fetchDiscordStatus("246787839570739211");
+                            </script>
+                        </section>
+                    </div>
+
+                    <div class="y2k-border" style="margin-bottom: 20px;">
+                        <h3>🎮 games 🎮</h3>
+                        <ul style="list-style-type: none">
+                            <li><b style="color: #ff1493;">MMOs</b> - FFXIV, PSO2, OS
+RS</li>
+                            <li><b style="color: #ff1493;">(J)RPGs</b> - Persona, Xenoblade</li>
+                            <li><b style="color: #ff1493;">Visual Novel/Adventure</b> - Danganronpa, AI The Somnium, 999</li>
+                        </ul>
+                        <p><i>basically stuff that is heavy on the story</i></p>
+                    </div>
+
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                        <div class="y2k-border" style="flex: 1; min-width: 200px;">
+                            <h3>📚 anime/manga</h3>
+                            <p>I pretty much only watch/
+read slice of life... yuru camp, k-on, nichijou that sorta thing</p>
+                        </div>
+
+                        <div class="y2k-border" style="flex: 1; min-width: 200px;">
+                            <h3>🎭 vtubers</h3>
+                            <p>mostly watch erina makina (pc), rosemi lovelock (niji), and pavolia reine (holo)</p>
+                        </div>
+
+                        <div class="y2k-border" style="flex: 1; min-width: 200px;">
+                            <h3>⚙️ stack</h3>
+                            <p>whatever seems fun (but usually next js + tailwind + flask)</p>
+                        </div>
+                    </div>
+
+                    <div style="margin: 30px 0;">
+                        <marquee behavior="scroll" direction="left" scrollamount="4">
+                            <span class="rainbow-text">♪ ♫ ♪</span>
+                            Not much else to say... if you want some random technical rambling go to
+                            <a href="https://blog.pinapelz.com" style="color: #ff1493; font-weight: bold;">my blog</a>
+                            <span class="rainbow-text">♪ ♫ ♪</span>
+                        </marquee>
+                    </div>
+
                     <div class="center">
                         <a href="https://imisserinya.phase-tracker.com">
-                            <div class="center">
+                            <div class="center y2k-border">
                                 <img
                                     src="https://files.pinapelz.com/1077804029737975879.webp"
                                     width="200px"
                                     class="crazy-image"
                                 />
-                                <div class="fullscreen-text">
+                                <div class="fullscreen-text rainbow-text">
                                     i miss erinya uuuuuuuuu!!!
                                 </div>
                             </div>
@@ -135,29 +207,29 @@
                     </div>
                 </div>
             </div>
-            <div class="footer">
                 <div class="footer">
-                    <div class="footer-links"></div>
-                        <p>
-                            <a href="https://pinapelz.moe">pinapelz.moe</a> /
-                            <a href="https://pinapelz.com">pinapelz.com</a> /
-                            <a href="https://arcade.pinapelz.com">arcade.moekyun.me</a> /
-                            <a href="https://phase-tracker.com">phase-tracker.com</a> /
-                            <a href="https://patchwork.moekyun.me">patchwork.moekyun.me</a> /
-                            <a href="https://blog.pinapelz.com">blog.pinapelz.com</a> /
-                            <a href="https://mojibaka.pinapelz.com">mojibaka.pinapelz.com</a> /
-                            <a href="https://moekyun.me">moekyun.me</a> /
-                            <a href="https://vtuber-captcha.moekyun.me">vtuber-captcha.moekyun.me</a>
-                        </p>
-                        <a href="https://nekoweb.org/"
-                        ><img src="https://nekoweb.org/assets/buttons/button7.gif"
-                    /></a>
-                    <a href="https://linux.org/"
-                        ><img
-                            src="https://adriansblinkiecollection.neocities.org/buttons/a46.jpg"
-                    /></a>
-                    </div>
+                    <p style="text-align: center;">
+                        <a href="https://pinapelz.moe">pinapelz.moe</a> /
+                        <a href="https://pinapelz.com">pinapelz.com</a> /
+                        <a href="https://arcade.pinapelz.com">arcade.moekyun.me</a> /
+                        <a href="https://phase-tracker.com">phase-tracker.com</a> /
+                        <a href="https://patchwork.moekyun.me">patchwork.moekyun.me</a> /
+                        <a href="https://blog.pinapelz.com">blog.pinapelz.com</a> /
+                        <a href="https://mojibaka.pinapelz.com">mojibaka.pinapelz.com</a> /
+                        <a href="https://moekyun.me">moekyun.me</a> /
+                        <a href="https://vtuber-captcha.moekyun.me">vtuber-captcha.moekyun.me</a>
+                    </p>
+                    <center style="margin-top: 20px;">
+                        <a href="https://nekoweb.org/">
+                            <img src="https://nekoweb.org/assets/buttons/button7.gif" />
+                        </a>
+                        <a href="https://linux.org/">
+
+                            <img src="https://adriansblinkiecollection.neocities.org/buttons/a46.jpg" />
+                        </a>
+                        <br>
+                    </center>
+                </div>
             </div>
-        </div>
     </body>
 </html>
