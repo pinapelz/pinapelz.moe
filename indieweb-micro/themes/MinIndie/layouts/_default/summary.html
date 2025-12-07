@@ -5,7 +5,7 @@
 	<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
 	{{ end }}
 	<div>
-		{{ .Summary }}
+		{{ .Summary | replaceRE "(?s)<div class=\"highlight\"[^>]*>.*?</div>" "" | replaceRE "(?s)<pre[^>]*>.*?</pre>" "" | replaceRE "(?s)<code[^>]*>.*?</code>" "" | replaceRE "(?s)```[\\s\\S]*?```" "" | safeHTML }}
 		{{ if .Truncated }}
 			<a href="{{ .Permalink }}">Read more...</a>
 		{{ end }}
