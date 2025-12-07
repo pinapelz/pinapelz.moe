@@ -9,20 +9,6 @@
         <link rel="stylesheet" type="text/css" href="styles/styles.css" />
         <script src="scripts/index.js"></script>
         <style>
-            @keyframes rainbow {
-                0% { color: #ff0000; }
-                20% { color: #ff8800; }
-                40% { color: #ffff00; }
-                60% { color: #00ff00; }
-                80% { color: #0088ff; }
-                100% { color: #ff00ff; }
-            }
-
-            .rainbow-text {
-                animation: rainbow 4s linear infinite;
-                font-weight: bold;
-            }
-
             @keyframes blink {
                 0%, 50% { opacity: 1; }
                 51%, 100% { opacity: 0; }
@@ -74,31 +60,32 @@
         </style>
     </head>
     <body>
+        <div class="top-navbar">
+          <nav aria-label="Main navigation">
+            <ul>
+              <li><a href="/">home</a></li>
+              <li><a href="/about.html">webmaster</a></li>
+              <li><a href="/projects.html" aria-current="page">projects</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="container">
             <div class="header" style="margin-top: 20px;">
                 <marquee behavior="alternate" direction="left" scrollamount="6">
-                    <span class="rainbow-text">☆゜・。。・゜゜・。。・゜★</span>
                     <span class="retro-shadow">About Me</span>
-                    <span class="rainbow-text">★゜・。。・゜゜・。。・゜☆</span>
                 </marquee>
             </div>
 
             <div class="sidebar">
-                <h3 class="sparkle">Navigation</h3>
-                <ul>
-                    <li><a href="/">🏠 home</a></li>
-                    <li><a href="/about.html">👤 webmaster</a></li>
-                    <li><a href="/projects.html">💻 projects</a></li>
-                </ul>
-                <img
-                    src="assets/pfp.webp"
-                    class="border-img crazy-image"
-                    width="250px"
-                    alt="Profile Picture"
-                    style="border: 3px ridge #ff1493; box-shadow: 5px 5px 15px rgba(255,20,147,0.5);"
-                />
 
                 <div class="contacts-section y2k-border">
+                    <img
+                        src="assets/pfp.webp"
+                        class="border-img crazy-image"
+                        width="250px"
+                        alt="Profile Picture"
+                        style="border: 3px ridge #ff1493; box-shadow: 5px 5px 15px rgba(255,20,147,0.5);"
+                    />
                     <h3>📧 Contact Me 📧</h3>
                     <p><small>idk maybe you need to reach me for some reason</small></p>
                     <ul>
@@ -184,10 +171,8 @@ read slice of life... yuru camp, k-on, nichijou that sorta thing</p>
 
                     <div style="margin: 30px 0;">
                         <marquee behavior="scroll" direction="left" scrollamount="4">
-                            <span class="rainbow-text">♪ ♫ ♪</span>
                             Not much else to say... if you want some random technical rambling go to
                             <a href="https://blog.pinapelz.com" style="color: #ff1493; font-weight: bold;">my blog</a>
-                            <span class="rainbow-text">♪ ♫ ♪</span>
                         </marquee>
                     </div>
 

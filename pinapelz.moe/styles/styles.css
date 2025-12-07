@@ -251,34 +251,34 @@ blink {
         width: 30px;
         height: 30px;
     }
-    
+
     .discord-status {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .discord-status img {
         margin-right: 0;
         margin-bottom: 10px;
     }
-    
+
     .discord-status h2 {
         font-size: 1rem;
     }
-    
+
     .discord-status p {
         font-size: 0.9rem;
     }
-    
+
     .crazy-image {
         max-width: 200px;
     }
-    
+
     /* Ensure no horizontal overflow */
     body {
         overflow-x: hidden;
     }
-    
+
     .container {
         max-width: 100%;
         overflow-x: hidden;
@@ -290,22 +290,22 @@ blink {
         width: 25px;
         height: 25px;
     }
-    
+
     .crazy-image {
         max-width: 150px;
     }
-    
+
     /* Further mobile optimizations */
     .general-section {
         padding: 8px;
         margin-top: 15px;
     }
-    
+
     .sidebar {
         padding: 8px;
         margin-top: 20px;
     }
-    
+
     .content {
         padding: 8px;
     }
@@ -409,4 +409,67 @@ blink {
     max-width: 100%;
     height: auto;
     display: block;
+}
+.top-navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.top-navbar nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.top-navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-navbar li {
+  margin: 0;
+}
+
+.top-navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: block;
+}
+
+.top-navbar a:hover,
+.top-navbar a:focus {
+  background-color: #ff69b4;
+  outline: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+.top-navbar a[aria-current="page"] {
+  background-color: #ff69b4;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .top-navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .top-navbar {
+    padding: 15px 0;
+  }
 }
