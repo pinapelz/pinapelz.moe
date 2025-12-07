@@ -1,0 +1,3 @@
+{{ $tag := .Get 0 }}
+
+<a href="{{ .Site.BaseURL }}/tags/{{ strings.TrimPrefix "#" $tag | urlize }}" class="p-category">{{ if not (hasPrefix $tag "#") }}#{{ end }}{{ strings.TrimPrefix "#" $tag }}</a>

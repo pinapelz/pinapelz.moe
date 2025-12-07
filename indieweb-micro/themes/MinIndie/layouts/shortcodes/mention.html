@@ -1,0 +1,8 @@
+{{ $username := .Get 0 }}
+{{ $url := .Get 1 }}
+
+{{ if not $url }}
+  {{ errorf "mention shortcode requires both username and URL parameters. Usage: {{< mention \"username\" \"https://example.com/@username\" >}}" }}
+{{ end }}
+
+<a href="{{ $url }}" class="u-in-reply-to h-card">@{{ strings.TrimPrefix "@" $username }}</a>

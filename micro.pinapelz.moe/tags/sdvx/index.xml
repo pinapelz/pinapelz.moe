@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sdvx on micro.pinapelz.moe</title>
+    <link>http://localhost:1313/tags/sdvx/</link>
+    <description>Recent content in Sdvx on micro.pinapelz.moe</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>yukais@pinapelz.com (Pinapelz)</managingEditor>
+    <webMaster>yukais@pinapelz.com (Pinapelz)</webMaster>
+    <atom:link href="http://localhost:1313/tags/sdvx/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

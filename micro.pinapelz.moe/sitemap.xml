@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://micro.pinapelz.moe/tags/arcade/</loc>
+    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
+  </url><url>
     <loc>https://micro.pinapelz.moe/categories/</loc>
-    <lastmod>2025-12-04T23:19:29-08:00</lastmod>
+    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/posts/2025-12-06-first-sdvx-18/</loc>
+    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/categories/games/</loc>
+    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/</loc>
+    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/posts/</loc>
+    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/tags/</loc>
+    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
   </url><url>
     <loc>https://micro.pinapelz.moe/tags/code/</loc>
     <lastmod>2025-12-04T23:19:29-08:00</lastmod>
@@ -11,16 +29,7 @@
     <loc>https://micro.pinapelz.moe/posts/2025-12-04-procon2-hid-tool/</loc>
     <lastmod>2025-12-04T23:19:29-08:00</lastmod>
   </url><url>
-    <loc>https://micro.pinapelz.moe/</loc>
-    <lastmod>2025-12-04T23:19:29-08:00</lastmod>
-  </url><url>
     <loc>https://micro.pinapelz.moe/tags/nintendo/</loc>
-    <lastmod>2025-12-04T23:19:29-08:00</lastmod>
-  </url><url>
-    <loc>https://micro.pinapelz.moe/posts/</loc>
-    <lastmod>2025-12-04T23:19:29-08:00</lastmod>
-  </url><url>
-    <loc>https://micro.pinapelz.moe/tags/</loc>
     <lastmod>2025-12-04T23:19:29-08:00</lastmod>
   </url><url>
     <loc>https://micro.pinapelz.moe/categories/tools/</loc>
@@ -46,9 +55,6 @@
   </url><url>
     <loc>https://micro.pinapelz.moe/posts/2025-12-02-power-bank-recall/</loc>
     <lastmod>2025-12-02T19:45:01-08:00</lastmod>
-  </url><url>
-    <loc>https://micro.pinapelz.moe/tags/arcade/</loc>
-    <lastmod>2025-12-02T00:22:32-08:00</lastmod>
   </url><url>
     <loc>https://micro.pinapelz.moe/posts/2025-12-02-china-town-fair/</loc>
     <lastmod>2025-12-02T00:22:32-08:00</lastmod>
