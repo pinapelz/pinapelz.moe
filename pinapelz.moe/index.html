@@ -31,6 +31,26 @@
                     font-size: 12px;
                 }
             }
+
+            /* Fix iframe container constraints */
+            .sidebar {
+                min-height: auto !important;
+                height: auto !important;
+                overflow: visible !important;
+            }
+
+            .sidebar iframe {
+                display: block;
+                margin: 10px auto;
+                width: 100%;
+                max-width: 320px;
+                border: none;
+            }
+
+            /* Ensure flex containers don't constrain height */
+            .flex {
+                align-items: stretch;
+            }
         </style>
     </head>
     <body>
@@ -149,7 +169,7 @@
                     </script>
                 </section>
                 <p id="quote" class="my-4"></p>
-                <iframe class="w-full max-w-xs h-48 mx-auto block" style="border:none" src="https://rubybulbs.net/neko.html"></iframe>
+                <iframe class="w-full max-w-xs h-48 mx-auto block" style="border:none; height: 300px; min-height: 250px;" src="https://rubybulbs.net/neko.html"></iframe>
             </div>
 
             <div class="content w-full xl:w-3/4">
