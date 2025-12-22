@@ -2,25 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://micro.pinapelz.moe/</loc>
-    <lastmod>2025-12-18T21:38:23-08:00</lastmod>
-  </url><url>
-    <loc>https://micro.pinapelz.moe/posts/</loc>
-    <lastmod>2025-12-18T21:38:23-08:00</lastmod>
-  </url><url>
-    <loc>https://micro.pinapelz.moe/tags/arcade/</loc>
-    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
-  </url><url>
     <loc>https://micro.pinapelz.moe/categories/</loc>
-    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
-  </url><url>
-    <loc>https://micro.pinapelz.moe/posts/2025-12-06-first-sdvx-18/</loc>
-    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
+    <lastmod>2025-12-19T22:15:50-08:00</lastmod>
   </url><url>
     <loc>https://micro.pinapelz.moe/categories/games/</loc>
-    <lastmod>2025-12-06T22:33:23-08:00</lastmod>
+    <lastmod>2025-12-19T22:15:50-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/</loc>
+    <lastmod>2025-12-19T22:15:50-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/tags/playlog/</loc>
+    <lastmod>2025-12-19T22:15:50-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/posts/2025-12-19-08-ffxiv-patch-7-4/</loc>
+    <lastmod>2025-12-19T22:15:50-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/posts/</loc>
+    <lastmod>2025-12-19T22:15:50-08:00</lastmod>
   </url><url>
     <loc>https://micro.pinapelz.moe/tags/</loc>
+    <lastmod>2025-12-19T22:15:50-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/tags/arcade/</loc>
+    <lastmod>2025-12-18T21:38:23-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/posts/2025-12-18-07-arcade-monsters-sd/</loc>
+    <lastmod>2025-12-18T21:38:23-08:00</lastmod>
+  </url><url>
+    <loc>https://micro.pinapelz.moe/posts/2025-12-06-first-sdvx-18/</loc>
     <lastmod>2025-12-06T22:33:23-08:00</lastmod>
   </url><url>
     <loc>https://micro.pinapelz.moe/tags/code/</loc>
