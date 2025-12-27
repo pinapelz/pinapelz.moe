@@ -219,6 +219,11 @@ ol, ul {
   padding-left: 1.1rem;
 }
 
+ol > li,
+ul > li {
+  margin-bottom: 0.8rem;
+}
+
 ul > li {
   list-style-type: disclosure-closed;
 }
