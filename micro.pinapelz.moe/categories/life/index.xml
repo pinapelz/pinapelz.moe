@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life on micro.pinapelz.moe</title>
-    <link>http://localhost:1313/categories/life/</link>
+    <link>https://micro.pinapelz.moe/categories/life/</link>
     <description>Recent content in Life on micro.pinapelz.moe</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>yukais@pinapelz.com (Pinapelz)</managingEditor>
     <webMaster>yukais@pinapelz.com (Pinapelz)</webMaster>
     <lastBuildDate>Tue, 02 Dec 2025 00:22:32 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/life/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://micro.pinapelz.moe/categories/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>China Town Fair</title>
-      <link>http://localhost:1313/posts/2025-12-02-china-town-fair/</link>
+      <link>https://micro.pinapelz.moe/posts/2025-12-02-china-town-fair/</link>
       <pubDate>Tue, 02 Dec 2025 00:22:32 -0800</pubDate><author>yukais@pinapelz.com (Pinapelz)</author>
-      <guid>http://localhost:1313/posts/2025-12-02-china-town-fair/</guid>
-      <description>&lt;p&gt;Visited New York during the Thanksgiving break and had a chance to stopped by one of the most legendary landmarks North American arcade gaming history.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/posts/2025-12-02-china-town-fair/outside-ctf.webp&#34;&#xA;    alt=&#34;China Town Fair Outside&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Also yep you&amp;rsquo;re reading that right, it indeed once home to a &lt;a href=&#34;https://davidpotorti.substack.com/p/the-dancing-chicken&#34;&gt;dancing chicken as well as one that played tic tac toe&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;But apart from just being an old arcade, it was also home to one of the largest competitive arcade game fighting scene (Marvel vs Capcom, Street Fighter, etc.). Many of NAs top players frequented this arcade. However, as we all already know video arcades began to die down during the early 2000s and China Town Fair was no exception having closed in 2011.&lt;/p&gt;</description>
+      <guid>https://micro.pinapelz.moe/posts/2025-12-02-china-town-fair/</guid>
+      <description>&lt;p&gt;Visited New York during the Thanksgiving break and had a chance to stopped by one of the most legendary landmarks North American arcade gaming history.&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;https://micro.pinapelz.moe/posts/2025-12-02-china-town-fair/outside-ctf.webp&#34;&#xA;    alt=&#34;China Town Fair Outside&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Also yep you&amp;rsquo;re reading that right, it indeed once home to a &lt;a href=&#34;https://davidpotorti.substack.com/p/the-dancing-chicken&#34;&gt;dancing chicken as well as one that played tic tac toe&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;But apart from just being an old arcade, it was also home to one of the largest competitive arcade game fighting scene (Marvel vs Capcom, Street Fighter, etc.). Many of NAs top players frequented this arcade. However, as we all already know video arcades began to die down during the early 2000s and China Town Fair was no exception having closed in 2011.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
